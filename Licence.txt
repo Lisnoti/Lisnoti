@@ -1,7 +1,6 @@
-
 Copyright 2018 The Noto Project Authors (github.com/googlei18n/noto-fonts)
 
-Modifications copyright (c) 2023 Tim Gordon (https://timgord.com/), with Reserved Font Name "Lisnoti".
+Modifications copyright 2023 Tim Gordon (https://timgord.com/), with Reserved Font Name "Lisnoti".
 
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
