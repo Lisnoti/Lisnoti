@@ -12,7 +12,7 @@ If you're interested in the background to Lisnoti, please see [this article](htt
 
 ![Lisnoti font card](LisnotiCard.svg)
 
-> Please bear in mind that this readme file that it is not typeset in Lisnoti, and so the character representations you see here are not the same as if you were using Lisnoti.
+> Please bear in mind that this readme file is not itself typeset in Lisnoti, and so the character representations you see here are not the same as if you were using Lisnoti.
 
 ## Key features
 
