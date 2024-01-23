@@ -1,12 +1,16 @@
 # READ ME
 
-This repo contains Lisnoti font files.
+This repo contains the Lisnoti font files.
 
 Lisnoti is a proportional sans serif font derived from the [Noto sans serif fonts](https://fonts.google.com/noto/) and is intended for both general use and for writing computer code (including in a maths/science context).
 
-Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web ()`.woff` and `.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
+Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff` and `.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
 
 I've tested Lisnoti on Windows and Apple, but not on Linux.
+
+If you're interested in the background to Lisnoti, please see [my blog article](https://timgord.com/2024-01/lisnoti--a-proportional-font-that-works-for-coding-too/).
+
+![Lisnoti font card](LisnotiCard.svg)
 
 ## Key features
 
