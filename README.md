@@ -8,7 +8,7 @@ Lisnoti is available in regular, italic, bold and bold-italic variants in OpenTy
 
 I've tested Lisnoti on Windows and Apple, but not on Linux.
 
-If you're interested in the background to Lisnoti, please see [my blog article](https://timgord.com/2024-01/lisnoti--a-proportional-font-that-works-for-coding-too/).
+If you're interested in the background to Lisnoti, please see [this article](https://timgord.com/2024-01/lisnoti--a-proportional-font-that-works-for-coding-too/).
 
 ![Lisnoti font card](LisnotiCard.svg)
 
