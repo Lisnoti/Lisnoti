@@ -12,6 +12,8 @@ If you're interested in the background to Lisnoti, please see [my blog article](
 
 ![Lisnoti font card](LisnotiCard.svg)
 
+> Please bear in mind that this readme file that it is not typeset in Lisnoti, and so the character representations you see here are not the same as if you were using Lisnoti.
+
 ## Key features
 
 Lisnoti incorporates the following:
