@@ -1,6 +1,8 @@
-Copyright 2018 The Noto Project Authors (github.com/googlei18n/noto-fonts)
-
-Modifications copyright 2023-2024 Tim Gordon (https://timgord.com/), with Reserved Font Name "Lisnoti".
+Noto Sans: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic).
+Noto Sans Symbols and Noto Sans Symbols 2: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/symbols).
+Noto Sans Math: Copyright 2018 Google LLC. All Rights Reserved.
+Noto Sans JP Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+Modifications copyright 2024 Tim Gordon with Reserved Font Name "Lisnoti" (https://github.com/Lisnoti/Lisnoti).
 
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
