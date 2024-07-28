@@ -6,6 +6,8 @@ Lisnoti (/lɪzˈnəʊtiː/) is a proportional sans serif font derived from [Noto
 
 Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff` and `.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
 
+> There is also an experimental version called 'Lisnoti Code WS' (`.ttf` only), which differs from Lisnoti only in that its spaces are 40% wider. This is based on feedback that standard proportional font-sized spaces can make code indentation using spaces hard to grok.
+
 I've tried out Lisnoti on Windows and Apple, but not on Linux.
 
 If you're interested in the background to Lisnoti, please see [this article](https://timgord.com/2024-01/lisnoti--a-proportional-font-that-works-for-coding-too/).
