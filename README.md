@@ -1,47 +1,54 @@
 # READ ME
 
-This repo contains the Lisnoti font files.
+*This repo contains the Lisnoti font files.*
 
-Lisnoti (/lɪzˈnəʊtiː/) is a proportional sans serif font derived from [Noto's sans serif fonts](https://fonts.google.com/noto/) and is intended for both general use and for writing computer code, including in a maths/science context.
+Lisnoti (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use 
+but with consideration also given to making it work
 
-Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff` and `.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
+- in maths, science and actuarial contexts, and
+- for writing computer code.
 
-> There is also an experimental version called 'Lisnoti Code WS' (`.ttf` only), which differs from Lisnoti only in that its spaces are 40% wider. This is based on feedback that standard proportional font-sized spaces can make code indentation using spaces hard to grok.
+Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (.ttf) and web (.woff and .woff2) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
 
-I've tried out Lisnoti on Windows and Apple, but not on Linux.
-
-If you're interested in the background to Lisnoti, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
+If you're interested in why Lisnoti exists, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
 
 ![Lisnoti font card](LisnotiCard.svg)
 
-If you have comments on Lisnoti, please use [this repo's discussions page](https://github.com/Lisnoti/Lisnoti/discussions). (If you do comment then please bear in mind that I am not a typography expert, just a frustrated user.)
+## Installing Lisnoti
+
+If you want to install Lisnoti on machines for local use then the OpenType font files are [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-OpenType.zip/).
+
+If you want to use Lisnoti for your website then [this page sets out how to do this](https://lisnoti.com/index.html#using-lisnoti-for-websites).
+
+## Feedback
+
+If you have comments on Lisnoti, please use [the GitHub repo discussions page](https://github.com/Lisnoti/Lisnoti/discussions). 
+
+Please bear in mind that I am not a typography expert, just a frustrated user.
 
 ## Key features
 
-***Please bear in mind that this readme file is not itself typeset in Lisnoti, and so the character representations you see below are*** **not** ***the same as if they were in Lisnoti.***
+*Please bear in mind that this readme file is not itself typeset in Lisnoti, and so the character representations you see below are **not** the same as if they were in Lisnoti. A more accurate depiction is available [here](https://lisnoti.com/index.html#key-features).*
 
-Lisnoti incorporates the following:
+Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto/), but with the following adaptions:
 
-1. Reliable distinction of 
-
-    - upper case `I` and lower case `l`, and
-    - upper case `O` and zero `0`.
+1. Reliable distinction of upper case `I` and lower case `l`, and upper case `O` and zero `0`.
 
 1. Consistent arithmetic, comparison, logic, set, *n*-ary and other maths operators, e.g. 
 
-    - arithmetic: `− × ÷ ± ∓ ∞`
+    - arithmetic: `− × ÷ ± ∓ ∞` (*NB Noto Sans gets the minus sign wrong*)
     - comparison: `≤ ≠ ≥ ≈ ≡ ≢ ∝`
     - logic: `¬ ∧ ∨ ⊻ ⊤ ⊥ ⊦`
     - set: `∩ ∪ ∈ ∉ ⊂ ⊃ ⊆ ⊇ ∅`
     - *n*-ary: `∑ ∏ ⋀ ⋁  ⋂ ⋃`
-    - other: `∫ ∂ √ Δ  ∇ ∀ ∃`
+    - other: `∫ ∂ √ Δ ∇ ∀ ∃`
 
 1. Greek and Cyrillic letters -- maths and logic make frequent use of Greek letters and occasionally Cyrillic ones too.
 
-1. Consistently formatted digit and -- if available -- Roman letter sub and superscripts and , e.g. 
+1. Consistently formatted digit and -- if available -- Roman letter sub and superscripts:
 
-    - superscript: `⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻ ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻ ᴬᴮᴰᴱᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾᴿᵀᵁⱽᵂ`
-    - subscript: `₀₁₂₃₄₅₆₇₈₉₍₎₊₋ ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ`
+    - superscript: `⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ𐞥ʳˢᵗᵘᵛʷˣʸᶻᴬᴮꟲᴰᴱꟳᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾꟴᴿᵀᵁⱽᵂ𐞲`
+    - subscript: `₀₁₂₃₄₅₆₇₈₉₍₎₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥ₝ₓ₞₟`
 
 1. A reasonable selection of symbols, including
 
@@ -52,11 +59,11 @@ Lisnoti incorporates the following:
     - game characters: `♔♕♖♗♘♙♚♛♜♝♞♟ ♠♡♢♣♤♥♦♧`
     - misc but useful: `⌂☸ ♩♪♫♬♭♮♯ ♀♂⚢⚣⚤⚥⚦⚧⚨⚩⚭⚮⚯⚲ ⌘ ␣ ☉ ♿ 円圓`
 
-1. All the operators [parsed by Julia](https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm).
+1. All the operators [parsed by Julia](https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm) (which is itself a good test of a technical font).
 
 1. [Unicode mathematical alphanumeric symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols), e.g. `𝐀𝐴𝑨 𝒜𝒲𝓐 𝔄 𝔸 𝕬 𝖠𝗔𝘈𝘼 𝙰`.
 
-(If you want all the above but you're happy with a monospaced font, then I suggest you try [Julia Mono](https://juliamono.netlify.app/).)
+(If you want all the above but with a monospaced font, then take a look at [Julia Mono](https://juliamono.netlify.app/).)
 
 ## Construction
 
@@ -95,6 +102,7 @@ This a summary of the steps I went through:
     -  Noto Sans super and sub-script letters and digits are out of alignment.
     -  I used using a FontForge script to recreate all of these superscripts from the full size versions (for Roman letters only -- I left others, e.g. Greek alone). Subscripts are implemented as references to the corresponding superscripts.
     -  For the regular font, the FontForge transform mangled the superscript `T`, `c`, `f`, `t`, `y`, which required hand-editing to clean them up.
+    -  I've since (2025-05-22) added superscript `q` (U+107A5) and superscript `Y` (U+107B2), and (approved by Unicode in November 2024) subscripts `w` (U+209D), `y` (U+209E) and `z` (U+209F).
 
 1. Issues with other maths symbols:
 
