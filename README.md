@@ -10,7 +10,7 @@ but with consideration also given to making it work
 
 Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (.ttf) and web (.woff and .woff2) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
 
-There is also a version ('Lisnoti Code WS') where the space character is 40% wider, which may be more to your taste in a coding context coding.
+There is also a version ('Lisnoti Code WS') where the space character is 40% wider, which may be more to your taste in a coding context.
 
 If you're interested in why Lisnoti exists, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
 
@@ -18,7 +18,9 @@ If you're interested in why Lisnoti exists, please see [this article](https://ti
 
 ## Installing Lisnoti
 
-If you want to install Lisnoti on machines for local use then the OpenType font files are zipped [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-OpenType.zip/). The alternative wider space version is [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/LisnotiCodeWS-OpenType.zip/) – you can install both at the same time to see which you prefer.
+If you want to install Lisnoti on machines for local use then the OpenType font files are zipped [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-OpenType.zip/).
+
+The alternative wider space version is [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/LisnotiCodeWS-OpenType.zip/). (You can install both at the same time to see which you prefer.)
 
 If you want to use Lisnoti for your website then [this page sets out how to do this](https://lisnoti.com/index.html#using-lisnoti-for-websites).
 
