@@ -10,13 +10,15 @@ but with consideration also given to making it work
 
 Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (.ttf) and web (.woff and .woff2) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/).
 
+There is also a version ('Lisnoti Code WS') where the space character is 40% wider, which may be more to your taste in a coding context coding.
+
 If you're interested in why Lisnoti exists, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
 
 ![Lisnoti font card](LisnotiCard.svg)
 
 ## Installing Lisnoti
 
-If you want to install Lisnoti on machines for local use then the OpenType font files are [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-OpenType.zip/).
+If you want to install Lisnoti on machines for local use then the OpenType font files are zipped [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-OpenType.zip/). The alternative wider space version is [here](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/LisnotiCodeWS-OpenType.zip/) – you can install both at the same time to see which you prefer.
 
 If you want to use Lisnoti for your website then [this page sets out how to do this](https://lisnoti.com/index.html#using-lisnoti-for-websites).
 
@@ -53,7 +55,7 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto/
 1. A reasonable selection of symbols, including
 
     - squares, diamonds, rectangles, triangles, circles and stars: `■□▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◊○◌●◦◯◻◼◽◾⚪⚫⚬★☆`
-    - arrows: `←↑→↓↔↕ ↖↗↘↙ ⇄ ⇅ ⇵ ⇆ ⇋⇌ ⇐ ⇒⇔ ⇦⇧⇨⇩  ￩￪￫￬`
+    - lots of arrows: `←↑→↓↔↕ ↖↗↘↙ ⇄ ⇅ ⇵ ⇆ ⇋⇌ ⇐ ⇒⇔ ⇦⇧⇨⇩  ￩￪￫￬`
     - ticks and crosses: `☐☑☒ ✓✔✕✖✗✘`
     - box drawing: `─│┌┐└┘├┤┬┴┼╭╮╯╰╱╲╳╴╵╶╷`
     - game characters: `♔♕♖♗♘♙♚♛♜♝♞♟ ♠♡♢♣♤♥♦♧`
@@ -110,8 +112,11 @@ This a summary of the steps I went through:
     - That said, I think the infinity symbol `∞` (`U+221E`) is itself on the small side for use as a value, and so I scaled it by 1.125.
     - The Noto Sans Math intersection `∩` (U+2229) and union `∪` (U+222A) symbols are taller than the three standard logical ops *and* `∧`(U+2227), *or* `∨` (U+2228) and *xor* `⊻` (U+22BB) operators and other operators, e.g. `+−×÷`. So I've lowered the tops to match the logical ops.
     - The *n*-ary logical and set operators `⋀` (`U+22C0`), `⋁` (`U+22C1`), `⋂` (`U+22C2`) and `⋃` (`U+22C3`) in Noto Sans Math are not sufficiently distinctive from the equivalent binary operators (`∧`, `∨`, `∩` and `∪`) and are also inconsistent with the *n*-ary summation `∑` (`U+2211`) and product `∏` (`U+220F`) from Noto Sans Math. So I redrew them using the *n*-ary product `∏` (`U+220F`) from Noto Sans Math as a guide.
-    - Noto Sans JP 'Left Right Arrow' `↔` (U+2194) and 'Left Right Double Arrow' `⇔` (U+21D4) are too narrow because they are the same width as the single arrows, but they have two arrowheads. So I have increased their overall width by elongating the horizontal part by 50% of the overall character width.
-    - The Noto Sans Math 'Rightwards Arrow From Bar' `↦` (U+21A6) and -- by symmetry -- 'Leftwards Arrow From Bar' `↤` (U+21A4) are inconsistent with other Lisnoti arrows (because these are copied from the -- IMO -- better arrows in Noto Sans JP). So I have created new versions based on the standard arrows from Noto Sans JP, i.e. `←` (U+2190) and `→` (U+2192), plus the vertical bars from `↹` (U+21B9) suitably realigned. 
+    - Arrows
+      - Noto Sans Math arrows are very small and so I've scaled them by 1.25 so that their stems are broadly the same width as e.g. maths symbols such as equals and minus sign. (*I originally copied the arrows from Noto Sans JP, but they are a subset of the arrows in Noto Sans Math, leaving the remaining ones from Noto Sans Math inconsistent.*)
+      - Noto Sans Math does not contain 'white' arrows such as `⇨` (U+21E8) and so I've copied these from Noto Sans Symbol 2 and emboldened them (because the outlines are two thin).
+      - Neither Noto Sans Math nor Noto Sans Symbol 2 contain half width arrows, i.e. `￩` (U+FFE9) to `￬` (U+FFEC), and so these are copied from Noto Sans JP.
+      - The downwards zigzag arrow, `↯` (U+21AF) is copied from Noto Sans Symbol 2 and scaled by 1.3.
     - The Noto Sans colon equals symbol `:=` (`U+2254`) is very narrow and hence hard to read. I've re-drawn it using the underlying characters (but re-centred the colon vertically). I made similar changes to `≕` (`U+2255`) and I added `⩴` (`U+2A74`) (because this is parsed by Julia).
     - On the basis that it is a potentially useful operator in the Unicode Mathematical Operators block but was not present in Noto Sans Math, I added the diameter sign `⌀` (`U+2300`) by scaling the empty set symbol `∅` (`U+2205`) from Noto Sans Math. 
     - I replaced the `Δ` (`U+394`) in Noto Sans with its equivalent from Noto Sans Math so that math symbols are consistent (given that I ultimately paste in the rest of Noto Sans Math).
@@ -122,7 +127,7 @@ This a summary of the steps I went through:
 
     - [Noto Sans Symbols 2](https://fonts.google.com/noto/specimen/Noto+Sans+Symbols+2): `☐` (`U+2610`), `☑` (`U+2611`), `☒` (`U+2612`), `⌘` (`U+2318`), `␣` (`U+2423`), `■` (`U+25A0`), `□` (`U+25A1`), `▪` (`U+25AA`), `▫` (`U+25AB`), `▬` (`U+25AC`), `▭` (`U+25AD`), `▮` (`U+25AE`), `▯` (`U+25AF`), `▰` (`U+25B0`), `▱` (`U+25B1`), `▲` (`U+25B2`), `△` (`U+25B3`), `▴` (`U+25B4`), `▵` (`U+25B5`), `▶` (`U+25B6`), `▷` (`U+25B7`), `▸` (`U+25B8`), `▹` (`U+25B9`), `►` (`U+25BA`), `▻` (`U+25BB`), `▼` (`U+25BC`), `▽` (`U+25BD`), `▾` (`U+25BE`), `▿` (`U+25BF`), `◀` (`U+25C0`), `◁` (`U+25C1`), `◂` (`U+25C2`), `◃` (`U+25C3`), `◄` (`U+25C4`), `◅` (`U+25C5`), `◆` (`U+25C6`), `◇` (`U+25C7`), `◊` (`U+25CA`), `○` (`U+25CB`), `◌` (`U+25CC`), `●` (`U+25CF`), `◦` (`U+25E6`), `◯` (`U+25EF`), `◻` (`U+25FB`), `◼` (`U+25FC`), `◽` (`U+25FD`), `◾` (`U+25FE`), `★` (`U+2605`), `☆` (`U+2606`), `☉` (`U+2609`), `♔` (`U+2654`), `♕` (`U+2655`), `♖` (`U+2656`), `♗` (`U+2657`), `♘` (`U+2658`), `♙` (`U+2659`), `♚` (`U+265A`), `♛` (`U+265B`), `♜` (`U+265C`), `♝` (`U+265D`), `♞` (`U+265E`), `♟` (`U+265F`), `♠` (`U+2660`), `♡` (`U+2661`), `♢` (`U+2662`), `♣` (`U+2663`), `♤` (`U+2664`), `♥` (`U+2665`), `♦` (`U+2666`), `♧` (`U+2667`), `♿` (`U+267F`), `⚪` (`U+26AA`), `⚫` (`U+26AB`), `⚬` (`U+26AC`), `✓` (`U+2713`), `✔` (`U+2714`), `✕` (`U+2715`), `✖` (`U+2716`), `✗` (`U+2717`), `✘` (`U+2718`), 
 
-    - [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP): `←` (`U+2190`), `↑` (`U+2191`), `→` (`U+2192`), `↓` (`U+2193`), `↔` (`U+2194`), `↕` (`U+2195`), `↖` (`U+2196`), `↗` (`U+2197`), `↘` (`U+2198`), `↙` (`U+2199`), `⇄` (`U+21C4`), `⇅` (`U+21C5`), `⇆` (`U+21C6`), `⇋` (`U+21CB`), `⇌` (`U+21CC`), `⇐` (`U+21D0`), `⇒` (`U+21D2`), `⇔` (`U+21D4`), `⇦` (`U+21E6`), `⇧` (`U+21E7`), `⇨` (`U+21E8`), `⇩` (`U+21E9`), `⇵` (`U+21F5`), `─` (`U+2500`), `│` (`U+2502`), `┌` (`U+250C`), `┐` (`U+2510`), `└` (`U+2514`), `┘` (`U+2518`), `├` (`U+251C`), `┤` (`U+2524`), `┬` (`U+252C`), `┴` (`U+2534`), `┼` (`U+253C`), `╭` (`U+256D`), `╮` (`U+256E`), `╯` (`U+256F`), `╰` (`U+2570`), `╱` (`U+2571`), `╲` (`U+2572`), `╳` (`U+2573`), `╴` (`U+2574`), `╵` (`U+2575`), `╶` (`U+2576`), `╷` (`U+2577`), `円` (`U+5186` ), `圓` (`U+5713`), `￩` (`U+FFE9`) , `￪` (`U+FFEA`) , `￫` (`U+FFEB`) , `￬` (`U+FFEC`) 
+    - [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP): `─` (`U+2500`), `│` (`U+2502`), `┌` (`U+250C`), `┐` (`U+2510`), `└` (`U+2514`), `┘` (`U+2518`), `├` (`U+251C`), `┤` (`U+2524`), `┬` (`U+252C`), `┴` (`U+2534`), `┼` (`U+253C`), `╭` (`U+256D`), `╮` (`U+256E`), `╯` (`U+256F`), `╰` (`U+2570`), `╱` (`U+2571`), `╲` (`U+2572`), `╳` (`U+2573`), `╴` (`U+2574`), `╵` (`U+2575`), `╶` (`U+2576`), `╷` (`U+2577`), `円` (`U+5186` ), `圓` (`U+5713`), `￩` (`U+FFE9`) , `￪` (`U+FFEA`) , `￫` (`U+FFEB`) , `￬` (`U+FFEC`) 
 
 1. Finally, I merged in all characters from [Noto Sans Math](https://fonts.google.com/noto/specimen/Noto+Sans+Math) not already present after the above changes.
 
