@@ -116,7 +116,7 @@ This a summary of the steps I went through:
     - The *n*-ary logical and set operators `⋀` (`U+22C0`), `⋁` (`U+22C1`), `⋂` (`U+22C2`) and `⋃` (`U+22C3`) in Noto Sans Math are not sufficiently distinctive from the equivalent binary operators (`∧`, `∨`, `∩` and `∪`) and are also inconsistent with the *n*-ary summation `∑` (`U+2211`) and product `∏` (`U+220F`) from Noto Sans Math. So I redrew them using the *n*-ary product `∏` (`U+220F`) from Noto Sans Math as a guide.
     - Arrows
       - Noto Sans Math arrows are very small and so I've scaled them by 1.25 so that their stems are broadly the same width as e.g. maths symbols such as equals and minus sign. (*I originally copied the arrows from Noto Sans JP, but they are a subset of the arrows in Noto Sans Math, leaving the remaining ones from Noto Sans Math inconsistent.*)
-      - Noto Sans Math does not contain 'white' arrows such as `⇨` (U+21E8) and so I've copied these from Noto Sans Symbol 2 and emboldened them (because the outlines are two thin).
+      - Noto Sans Math does not contain 'white' arrows such as `⇨` (U+21E8) and so I've copied these from Noto Sans Symbol 2 and emboldened them (because the outlines are too thin).
       - Neither Noto Sans Math nor Noto Sans Symbol 2 contain half width arrows, i.e. `￩` (U+FFE9) to `￬` (U+FFEC), and so these are copied from Noto Sans JP.
       - The downwards zigzag arrow, `↯` (U+21AF) is copied from Noto Sans Symbol 2 and scaled by 1.3.
     - The Noto Sans colon equals symbol `:=` (`U+2254`) is very narrow and hence hard to read. I've re-drawn it using the underlying characters (but re-centred the colon vertically). I made similar changes to `≕` (`U+2255`) and I added `⩴` (`U+2A74`) (because this is parsed by Julia).
