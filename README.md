@@ -20,17 +20,17 @@ There are three ways to use Lisnoti.
 
 ### 1. Install it
 
-To get Lisnoti to work on your computer, download [Lisnoti-ttf-fonts.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-ttf-fonts.zip), unzip it and install the four `.ttf` files in the usual way for your operating system:
+To get Lisnoti to work on your computer, download [Lisnoti-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-ttf.zip), unzip it and install the four `.ttf` files in the usual way for your operating system:
 
 - Windows: select the font files, right-click and choose *Install*.
 - Mac: open the font files in Font Book.
 
 ### 2. Website -- served by the website
 
-Download [Lisnoti-woff2-fonts.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2-fonts.zip), copy the folder into your site, link its stylesheet, and name the font in your CSS:
+Download [Lisnoti-woff2.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2.zip), copy the folder into your site, link its stylesheet, and name the font in your CSS:
 
 ```html
-<link rel="stylesheet" href="/Lisnoti-woff2-fonts/lisnoti.css">
+<link rel="stylesheet" href="/Lisnoti-woff2/lisnoti.css">
 ```
 
 ```css
@@ -40,7 +40,7 @@ body { font-family: Lisnoti, sans-serif; }
 If you would rather not have a `<link>` in your pages, put this line at the top of your own stylesheet instead and drop the `<link>`.[^import]
 
 ```css
-@import url("/Lisnoti-woff2-fonts/lisnoti.css");
+@import url("/Lisnoti-woff2/lisnoti.css");
 ```
 
 Either way, leave `lisnoti.css` in the folder with its font files.[^paths]
@@ -48,7 +48,7 @@ Either way, leave `lisnoti.css` in the folder with its font files.[^paths]
 `lisnoti.css` serves the font in slices: Latin letters plus common characters, Greek, Cyrillic, maths symbols and so on are separate files, and a page fetches only the slices for the characters it uses. A page of English text fetches about 27&#xA0;KB for each font weight, and the maths and symbol slices only when a character calls for them. There is nothing else to set up; the browser does the choosing.
 
 > [!NOTE]
-> If you would rather have one file per style (about 400&#xA0;KB each), or your page sets decomposed phonetic text (a base letter followed by a combining mark, which needs both to come from one file), use [Lisnoti-woff2-monolithic-fonts.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2-monolithic-fonts.zip) instead and link its `lisnoti-full.css`.
+> If you would rather have one file per style (about 400&#xA0;KB each), or your page sets decomposed phonetic text (a base letter followed by a combining mark, which needs both to come from one file), use [Lisnoti-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2-monolithic.zip) instead and link its `lisnoti-full.css`.
 
 ### 3. Website -- served by `lisnoti.com`
 
@@ -72,10 +72,10 @@ Each font format gets its own folder and zip file (for easy download).
 
 | Path | Holds |
 |:--|:--|
-| `Lisnoti-ttf-fonts/` | The four desktop fonts: `Lisnoti-Regular.ttf`, `-Italic`, `-Bold`, `-BoldItalic`. |
-| `Lisnoti-woff2-fonts/` | The web fonts, cut into slices: 52 `.woff2` files and `lisnoti.css`, which loads only the slices a page needs. |
-| `Lisnoti-woff2-monolithic-fonts/` | The web fonts whole, one `.woff2` per style, and `lisnoti-full.css`. |
-| `LisnotiCodeWS-ttf-fonts/` and `LisnotiCodeWS-woff2-monolithic-fonts/` | 'Lisnoti Code WS', an older variant built from Lisnoti&#xA0;1.002 in which the space is 40% wider. It will be replaced by a proper coding family, Lisnoti Code, which is in preparation. |
+| `Lisnoti-ttf/` | The four desktop fonts: `Lisnoti-Regular.ttf`, `-Italic`, `-Bold`, `-BoldItalic`. |
+| `Lisnoti-woff2/` | The web fonts, cut into slices: 52 `.woff2` files and `lisnoti.css`, which loads only the slices a page needs. |
+| `Lisnoti-woff2-monolithic/` | The web fonts whole, one `.woff2` per style, and `lisnoti-full.css`. |
+| `LisnotiCodeWS-ttf/` and `LisnotiCodeWS-woff2-monolithic/` | 'Lisnoti Code WS', an older variant built from Lisnoti&#xA0;1.002 in which the space is 40% wider. It will be replaced by a proper coding family, Lisnoti Code, which is in preparation. |
 | `Licence.txt` | The SIL Open Font Licence plus the notices of the Noto fonts from which Lisnoti is built. |
 | `images/` | The pictures in this readme. |
 
@@ -88,7 +88,7 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 ## Key features
 
 > [!NOTE]
-> The symbol lines below are pictures, set in Lisnoti, since GitHub renders this readme in its own font. The same characters are set live at [lisnoti.com](https://lisnoti.com/index.html#key-features).
+> The Lisnoti characters displayed below use pictures because GitHub renders repo files in its own font. The same characters are set in Lisnoti itself at [lisnoti.com](https://lisnoti.com/index.html#key-features).
 
 Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto/), but with the following adaptions:
 
