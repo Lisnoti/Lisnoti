@@ -25,7 +25,7 @@ To get Lisnoti to work on your computer, download [Lisnoti-ttf.zip](https://gith
 - Windows: select the font files, right-click and choose *Install*.
 - Mac: open the font files in Font Book.
 
-### 2. Website -- served by the website
+### 2. Website &ndash; served by the website
 
 Download [Lisnoti-woff2.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2.zip), copy the folder into your site, link its stylesheet, and name the font in your CSS:
 
@@ -45,35 +45,37 @@ If you would rather not have a `<link>` in your pages, put this line at the top 
 
 Either way, leave `lisnoti.css` in the folder with its font files.[^paths]
 
-`lisnoti.css` serves the font in slices: Latin letters plus common characters, Greek, Cyrillic, maths symbols and so on are separate files, and a page fetches only the slices for the characters it uses. A page of English text fetches about 27&#xA0;KB for each font weight, and the maths and symbol slices only when a character calls for them. There is nothing else to set up; the browser does the choosing.
+`lisnoti.css` serves the font by subset: Latin letters plus common characters, Greek, Cyrillic, maths symbols and so on are separate files, and a page fetches only the subsets for the characters it uses. A page of English text fetches about 27&#xA0;KB for each font weight, and the maths and symbol subsets only as and when needed.
 
 > [!NOTE]
-> If you would rather have one file per style (about 400&#xA0;KB each), or your page sets decomposed phonetic text (a base letter followed by a combining mark, which needs both to come from one file), use [Lisnoti-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2-monolithic.zip) instead and link its `lisnoti-full.css`.
+> If you would rather have one file per style (about 425&#xA0;KB each), or your page sets decomposed phonetic text (a base letter followed by a combining mark, which needs both to come from one file), use [Lisnoti-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/Lisnoti-woff2-monolithic.zip) instead and link its `lisnoti-full.css`.
 
-### 3. Website -- served by `lisnoti.com`
+### 3. Website &ndash; served by lisnoti.com
 
-Host nothing: point at the stylesheet on lisnoti.com instead, either from your pages
+You don't need to host anything if you don't want to. Simply point at the stylesheet on lisnoti.com instead, either from your web pages (which means they all require this link in their `<head>` section)
 
 ```html
 <link rel="stylesheet" href="https://lisnoti.com/lisnoti.css">
 ```
 
-or from the top of your own stylesheet, which is what lisnoti.com itself does
+or from the top of your own stylesheet (which is what lisnoti.com itself does)
 
 ```css
 @import url("https://lisnoti.com/lisnoti.css");
 ```
 
-and name the font as before. It is the same sliced font, served from there, with `https://lisnoti.com/lisnoti-full.css` as the one-file-per-style alternative. [lisnoti.com](https://lisnoti.com/index.html#using-lisnoti-for-websites) has the details.
+The above links deliver the font by subset (which is usually the optimal approach for web pages). If instead you want the monolithic version use `https://lisnoti.com/lisnoti-full.css`.
+
+See [lisnoti.com](https://lisnoti.com/index.html#using-lisnoti-for-websites) for more details.
 
 ### Guide to this repo
 
-Each font format gets its own folder and zip file (for easy download).
+Each font file format has its own folder and zip file (for easy download).
 
 | Path | Holds |
 |:--|:--|
 | `Lisnoti-ttf/` | The four desktop fonts: `Lisnoti-Regular.ttf`, `-Italic`, `-Bold`, `-BoldItalic`. |
-| `Lisnoti-woff2/` | The web fonts, cut into slices: 52 `.woff2` files and `lisnoti.css`, which loads only the slices a page needs. |
+| `Lisnoti-woff2/` | The web fonts, cut into subsets: 52 `.woff2` files and `lisnoti.css`, which loads only the subsets a page needs. |
 | `Lisnoti-woff2-monolithic/` | The web fonts whole, one `.woff2` per style, and `lisnoti-full.css`. |
 | `LisnotiCodeWS-ttf/` and `LisnotiCodeWS-woff2-monolithic/` | 'Lisnoti Code WS', an older variant built from Lisnoti&#xA0;1.002 in which the space is 40% wider. It will be replaced by a proper coding family, Lisnoti Code, which is in preparation. |
 | `Licence.txt` | The SIL Open Font Licence plus the notices of the Noto fonts from which Lisnoti is built. |
@@ -90,7 +92,7 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 > [!NOTE]
 > The Lisnoti characters displayed below use pictures because GitHub renders repo files in its own font. The same characters are set in Lisnoti itself at [lisnoti.com](https://lisnoti.com/index.html#key-features).
 
-Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto/), but with the following adaptions:
+Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto), but with the following adaptions:
 
 1. Reliable distinction of upper case `I`, lower case `l` and one `1`, and of upper case `O` and zero `0`, in every style:
 
@@ -107,12 +109,11 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto/
 
 1. An OpenType `MATH` table, so Lisnoti can be chosen as the equation font in Word and loaded by `unicode-math` in LuaLaTeX: fractions, radicals, big operators with limits, stretchy brackets and accents are all set from the font's own data.
 
-1. Greek and Cyrillic letters -- maths and logic make frequent use of Greek letters and occasionally Cyrillic ones too.
+1. Greek and Cyrillic letters &ndash; maths and logic make frequent use of Greek letters and occasionally Cyrillic ones too.
 
-1. Consistently formatted digit and -- if available -- Roman letter sub and superscripts (with kerning):
+1. Consistently formatted digit and &ndash; if available &ndash; Roman letter sub and superscripts:
 
-    <picture><source media="(prefers-color-scheme: dark)" srcset="images/scripts-example-dark.svg"><img alt="x² + y² = r², f⁽ⁿ⁾(x), aᵢⱼ, H₂O, xₙ₊₁" src="images/scripts-example.svg" height="19"></picture>
-
+    - examples: <picture><source media="(prefers-color-scheme: dark)" srcset="images/scripts-example-dark.svg"><img alt="x² + y² = r², f⁽ⁿ⁾(x), aᵢⱼ, H₂O, xₙ₊₁" src="images/scripts-example.svg" height="19"></picture>
     - superscript: <picture><source media="(prefers-color-scheme: dark)" srcset="images/superscript-dark.svg"><img alt="x⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ𐞥ʳˢᵗᵘᵛʷˣʸᶻᴬᴮꟲᴰᴱꟳᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾꟴᴿᵀᵁⱽᵂx" src="images/superscript.svg" height="15"></picture>
     - subscript: <picture><source media="(prefers-color-scheme: dark)" srcset="images/subscript-dark.svg"><img alt="x₀₁₂₃₄₅₆₇₈₉₍₎₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥ₝ₓ₞₟x" src="images/subscript.svg" height="14"></picture>
 
@@ -123,7 +124,7 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto/
     - ticks and crosses: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ticks-dark.svg"><img alt="☐☑☒ ✓✔✕✖✗✘" src="images/ticks.svg" height="12"></picture>
     - box drawing: <picture><source media="(prefers-color-scheme: dark)" srcset="images/box-drawing-dark.svg"><img alt="─│┌┐└┘├┤┬┴┼╭╮╯╰╱╲╳╴╵╶╷" src="images/box-drawing.svg" height="17"></picture>
     - game characters: <picture><source media="(prefers-color-scheme: dark)" srcset="images/games-dark.svg"><img alt="♔♕♖♗♘♙♚♛♜♝♞♟ ♠♡♢♣♤♥♦♧" src="images/games.svg" height="14"></picture>
-    - currency: <picture><source media="(prefers-color-scheme: dark)" srcset="images/currency-dark.svg"><img alt="$ £ € ¥ ₹ ₽ ₩ ৳ ฿ ₿" src="images/currency.svg" height="15"></picture>
+    - currency, the whole Unicode currency block U+20A0 to U+20C1 among them: <picture><source media="(prefers-color-scheme: dark)" srcset="images/currency-dark.svg"><img alt="$ £ € ¥ ₹ ₽ ₩ ৳ ฿ ⃁ ₿" src="images/currency.svg" height="15"></picture>
     - misc but useful: <picture><source media="(prefers-color-scheme: dark)" srcset="images/misc-dark.svg"><img alt="⌂☸ ♩♪♫♬♭♮♯ ♀♂⚢⚣⚤⚥⚦⚧⚨⚩⚭⚮⚯⚲ ⌘ ␣ ☉ ♿ 円圓" src="images/misc.svg" height="17"></picture>
 
 1. All the operators [parsed by Julia](https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm) (which is itself a good test of a technical font).
@@ -152,9 +153,13 @@ Lisnoti&#xA0;v2.000 is a complete rebuild of the font:
 - The base is [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)&#xA0;v2.015 (previously v2.013).
 - The maths donor is [Noto Sans Math](https://fonts.google.com/noto/specimen/Noto+Sans+Math)&#xA0;v3.000, Khaled Hosny's 2024 redesign:
     - This shifted the maths vertical alignment axis and redrew and added many glyphs.
-    - Notwithstanding the Noto redesign, Lisnoti has itself redrawn the *n*-ary operators, radical sign, tick and cross family and a few other glyphs for consistency and aesthetics.
-    - Noto Sans Math now carries an OpenType `MATH` table; Lisnoti builds its own on the same pattern, with every value measured from its own glyphs in each of the four styles, which means that *Lisnoti can now be used to typeset equations*.
-- The web font files are sliced by script to optimise web page access. For instance, a Latin-only page downloads about 27&#xA0;KB per weight for Lisnoti&#xA0;v2.000, against 350&#xA0;KB for the whole font previously.
+    - Notwithstanding Noto's redesign, Lisnoti has itself redrawn the *n*-ary operators, radical sign, tick and cross family and a few other glyphs for consistency and aesthetics.
+    - Lisnoti now incorporates an OpenType `MATH` table, built using the same pattern as Noto Sans Math but with Lisnoti glyph measurements. This means that **Lisnoti can now be used to typeset equations**.
+- Three currency symbols were added, the last of which completes Lisnoti's coverage of the Unicode currency block, U+20A0 to U+20C1:
+    - <picture><source media="(prefers-color-scheme: dark)" srcset="images/bengali-rupee-dark.svg"><img alt="৳" src="images/bengali-rupee.svg" height="13"></picture> (U+09F3) Bangladeshi taka / Bengali rupee sign (from Noto Sans Bengali).
+    - <picture><source media="(prefers-color-scheme: dark)" srcset="images/baht-dark.svg"><img alt="฿" src="images/baht.svg" height="14"></picture> (U+0E3F) Thai baht sign (from Noto Sans Thai).
+    - <picture><source media="(prefers-color-scheme: dark)" srcset="images/saudi-riyal-dark.svg"><img alt="⃁" src="images/saudi-riyal.svg" height="13"></picture> (U+20C1) Saudi riyal sign (drawn from the Saudi Central Bank's published artwork to ensure it has the same width as zero, which is the rule followed by all currency signs in Lisnoti).
+- The web font files are subset by script to optimise web page access. For instance, a Latin-only page downloads about 27&#xA0;KB per weight for Lisnoti&#xA0;v2.000, against 350&#xA0;KB for the whole font previously, i.e. a reduction in download size of over 90%.
 - WOFF ('WOFF&#xA0;1') files are no longer included on the basis that every browser now in use supports WOFF2.
 
 [^link]: A `<link>` is usually one edit, not one per page: most sites put it in a template, a layout or a shared header. Where that is so, the `<link>` is both the tidier and the faster of the two.
