@@ -1,4 +1,4 @@
-/* Lisnoti Version 2.001, cut into 13 subsets per style by tools/subset_web.py.
+/* Lisnoti Version 2.002, cut into 13 subsets per style by tools/subset_web.py.
  * SIL Open Font License 1.1 -- https://openfontlicense.org
  *
  * To use: upload every .woff2 beside this file and link it, then set
@@ -21,7 +21,7 @@
 
 /* ---- Regular ---- */
 
-/* math-alpha -- 70,696 bytes */
+/* math-alpha -- 71,004 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -31,7 +31,7 @@
   unicode-range: U+1D400-1D7FF, U+1EE00-1EEFF, U+FE00;
 }
 
-/* math -- 98,360 bytes */
+/* math -- 98,172 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -41,7 +41,7 @@
   unicode-range: U+0606-060A, U+060C, U+0660-066C, U+06F0-06F9, U+2070-209F, U+20D0-20F0, U+2100-218F, U+2190-21FF, U+2200-22FF, U+2300-23FF, U+25A0-25FF, U+27C0-27FF, U+2900-297F, U+2980-29FF, U+2A00-2AFF, U+2B00-2BFF, U+FE00, U+FF5B, U+FF5D, U+FFE9-FFEC;
 }
 
-/* symbols -- 19,364 bytes */
+/* symbols -- 19,464 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -51,7 +51,7 @@
   unicode-range: U+2400-24FF, U+2500-259F, U+2600-26FF, U+2700-27BF, U+2E00-2E7F, U+3012, U+3030, U+10FB, U+A92E, U+FFFC, U+11AB0-11AB1, U+1F700-1F7FF;
 }
 
-/* marks -- 11,220 bytes */
+/* marks -- 11,268 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -61,7 +61,7 @@
   unicode-range: U+0300-036F, U+1AB0-1AFF, U+1DC0-1DFF, U+FE20-FE2F;
 }
 
-/* phonetic -- 8,732 bytes */
+/* phonetic -- 8,764 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -71,7 +71,7 @@
   unicode-range: U+A700-A71F, U+10780-107BF, U+1DF00-1DFFF;
 }
 
-/* devanagari -- 45,000 bytes */
+/* devanagari -- 45,036 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -81,7 +81,7 @@
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 
-/* cyrillic-ext -- 23,068 bytes */
+/* cyrillic-ext -- 23,000 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -91,7 +91,7 @@
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-/* cyrillic -- 7,292 bytes */
+/* cyrillic -- 7,300 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -101,7 +101,7 @@
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
-/* greek-ext -- 4,904 bytes */
+/* greek-ext -- 4,924 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -111,7 +111,7 @@
   unicode-range: U+1F00-1FFF;
 }
 
-/* greek -- 8,048 bytes */
+/* greek -- 8,052 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -121,7 +121,7 @@
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 
-/* vietnamese -- 5,832 bytes */
+/* vietnamese -- 5,860 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -131,7 +131,7 @@
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 
-/* latin-ext -- 72,568 bytes */
+/* latin-ext -- 72,548 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -141,7 +141,7 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CD, U+02CE-02D7, U+02D8-02DB, U+02DD-02FF, U+0304, U+0308, U+0329, U+09F3, U+0E3F, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C1, U+2113, U+2C60-2C7F, U+5186, U+5713, U+A720-A7FF, U+AB30-AB6F;
 }
 
-/* latin -- 25,220 bytes */
+/* latin -- 25,408 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -153,7 +153,7 @@
 
 /* ---- Italic ---- */
 
-/* math-alpha -- 69,532 bytes */
+/* math-alpha -- 69,396 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -163,7 +163,7 @@
   unicode-range: U+1D400-1D7FF, U+1EE00-1EEFF, U+FE00;
 }
 
-/* math -- 100,040 bytes */
+/* math -- 99,848 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -173,7 +173,7 @@
   unicode-range: U+0606-060A, U+060C, U+0660-066C, U+06F0-06F9, U+2070-209F, U+20D0-20F0, U+2100-218F, U+2190-21FF, U+2200-22FF, U+2300-23FF, U+25A0-25FF, U+27C0-27FF, U+2900-297F, U+2980-29FF, U+2A00-2AFF, U+2B00-2BFF, U+FE00, U+FF5B, U+FF5D, U+FFE9-FFEC;
 }
 
-/* symbols -- 19,280 bytes */
+/* symbols -- 19,404 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -183,7 +183,7 @@
   unicode-range: U+2400-24FF, U+2500-259F, U+2600-26FF, U+2700-27BF, U+2E00-2E7F, U+3012, U+3030, U+10FB, U+A92E, U+FFFC, U+11AB0-11AB1, U+1F700-1F7FF;
 }
 
-/* marks -- 11,916 bytes */
+/* marks -- 11,940 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -193,7 +193,7 @@
   unicode-range: U+0300-036F, U+1AB0-1AFF, U+1DC0-1DFF, U+FE20-FE2F;
 }
 
-/* phonetic -- 9,460 bytes */
+/* phonetic -- 9,492 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -203,7 +203,7 @@
   unicode-range: U+A700-A71F, U+10780-107BF, U+1DF00-1DFFF;
 }
 
-/* devanagari -- 45,240 bytes */
+/* devanagari -- 45,112 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -213,7 +213,7 @@
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 
-/* cyrillic-ext -- 25,456 bytes */
+/* cyrillic-ext -- 25,440 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -223,7 +223,7 @@
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-/* cyrillic -- 8,892 bytes */
+/* cyrillic -- 8,868 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -243,7 +243,7 @@
   unicode-range: U+1F00-1FFF;
 }
 
-/* greek -- 8,716 bytes */
+/* greek -- 8,700 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -253,7 +253,7 @@
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 
-/* vietnamese -- 5,840 bytes */
+/* vietnamese -- 5,908 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -263,7 +263,7 @@
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 
-/* latin-ext -- 73,312 bytes */
+/* latin-ext -- 73,436 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -273,7 +273,7 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CD, U+02CE-02D7, U+02D8-02DB, U+02DD-02FF, U+0304, U+0308, U+0329, U+09F3, U+0E3F, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C1, U+2113, U+2C60-2C7F, U+5186, U+5713, U+A720-A7FF, U+AB30-AB6F;
 }
 
-/* latin -- 26,732 bytes */
+/* latin -- 26,828 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -285,7 +285,7 @@
 
 /* ---- Bold ---- */
 
-/* math-alpha -- 85,256 bytes */
+/* math-alpha -- 85,292 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -295,7 +295,7 @@
   unicode-range: U+1D400-1D7FF, U+1EE00-1EEFF, U+FE00;
 }
 
-/* math -- 115,564 bytes */
+/* math -- 115,420 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -305,7 +305,7 @@
   unicode-range: U+0606-060A, U+060C, U+0660-066C, U+06F0-06F9, U+2070-209F, U+20D0-20F0, U+2100-218F, U+2190-21FF, U+2200-22FF, U+2300-23FF, U+25A0-25FF, U+27C0-27FF, U+2900-297F, U+2980-29FF, U+2A00-2AFF, U+2B00-2BFF, U+FE00, U+FF5B, U+FF5D, U+FFE9-FFEC;
 }
 
-/* symbols -- 21,064 bytes */
+/* symbols -- 21,180 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -315,7 +315,7 @@
   unicode-range: U+2400-24FF, U+2500-259F, U+2600-26FF, U+2700-27BF, U+2E00-2E7F, U+3012, U+3030, U+10FB, U+A92E, U+FFFC, U+11AB0-11AB1, U+1F700-1F7FF;
 }
 
-/* marks -- 11,956 bytes */
+/* marks -- 11,944 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -325,7 +325,7 @@
   unicode-range: U+0300-036F, U+1AB0-1AFF, U+1DC0-1DFF, U+FE20-FE2F;
 }
 
-/* phonetic -- 9,392 bytes */
+/* phonetic -- 9,436 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -335,7 +335,7 @@
   unicode-range: U+A700-A71F, U+10780-107BF, U+1DF00-1DFFF;
 }
 
-/* devanagari -- 47,276 bytes */
+/* devanagari -- 47,440 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -345,7 +345,7 @@
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 
-/* cyrillic-ext -- 22,980 bytes */
+/* cyrillic-ext -- 22,972 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -355,7 +355,7 @@
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-/* cyrillic -- 7,476 bytes */
+/* cyrillic -- 7,500 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -365,7 +365,7 @@
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
-/* greek-ext -- 4,940 bytes */
+/* greek-ext -- 4,968 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -375,7 +375,7 @@
   unicode-range: U+1F00-1FFF;
 }
 
-/* greek -- 8,136 bytes */
+/* greek -- 8,152 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -385,7 +385,7 @@
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 
-/* vietnamese -- 6,504 bytes */
+/* vietnamese -- 6,356 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -395,7 +395,7 @@
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 
-/* latin-ext -- 77,144 bytes */
+/* latin-ext -- 77,116 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -405,7 +405,7 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CD, U+02CE-02D7, U+02D8-02DB, U+02DD-02FF, U+0304, U+0308, U+0329, U+09F3, U+0E3F, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C1, U+2113, U+2C60-2C7F, U+5186, U+5713, U+A720-A7FF, U+AB30-AB6F;
 }
 
-/* latin -- 27,356 bytes */
+/* latin -- 27,364 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: normal;
@@ -417,7 +417,7 @@
 
 /* ---- BoldItalic ---- */
 
-/* math-alpha -- 84,248 bytes */
+/* math-alpha -- 84,216 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -427,7 +427,7 @@
   unicode-range: U+1D400-1D7FF, U+1EE00-1EEFF, U+FE00;
 }
 
-/* math -- 115,208 bytes */
+/* math -- 115,176 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -437,7 +437,7 @@
   unicode-range: U+0606-060A, U+060C, U+0660-066C, U+06F0-06F9, U+2070-209F, U+20D0-20F0, U+2100-218F, U+2190-21FF, U+2200-22FF, U+2300-23FF, U+25A0-25FF, U+27C0-27FF, U+2900-297F, U+2980-29FF, U+2A00-2AFF, U+2B00-2BFF, U+FE00, U+FF5B, U+FF5D, U+FFE9-FFEC;
 }
 
-/* symbols -- 21,108 bytes */
+/* symbols -- 21,116 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -447,7 +447,7 @@
   unicode-range: U+2400-24FF, U+2500-259F, U+2600-26FF, U+2700-27BF, U+2E00-2E7F, U+3012, U+3030, U+10FB, U+A92E, U+FFFC, U+11AB0-11AB1, U+1F700-1F7FF;
 }
 
-/* marks -- 12,668 bytes */
+/* marks -- 12,676 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -457,7 +457,7 @@
   unicode-range: U+0300-036F, U+1AB0-1AFF, U+1DC0-1DFF, U+FE20-FE2F;
 }
 
-/* phonetic -- 9,748 bytes */
+/* phonetic -- 9,768 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -467,7 +467,7 @@
   unicode-range: U+A700-A71F, U+10780-107BF, U+1DF00-1DFFF;
 }
 
-/* devanagari -- 47,240 bytes */
+/* devanagari -- 47,220 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -477,7 +477,7 @@
   unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
 }
 
-/* cyrillic-ext -- 25,056 bytes */
+/* cyrillic-ext -- 25,068 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -487,7 +487,7 @@
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-/* cyrillic -- 8,868 bytes */
+/* cyrillic -- 8,824 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -497,7 +497,7 @@
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
-/* greek-ext -- 5,356 bytes */
+/* greek-ext -- 5,428 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -507,7 +507,7 @@
   unicode-range: U+1F00-1FFF;
 }
 
-/* greek -- 8,808 bytes */
+/* greek -- 8,776 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -517,7 +517,7 @@
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 
-/* vietnamese -- 6,588 bytes */
+/* vietnamese -- 6,572 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -527,7 +527,7 @@
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 
-/* latin-ext -- 75,712 bytes */
+/* latin-ext -- 75,672 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;
@@ -537,7 +537,7 @@
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CD, U+02CE-02D7, U+02D8-02DB, U+02DD-02FF, U+0304, U+0308, U+0329, U+09F3, U+0E3F, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C1, U+2113, U+2C60-2C7F, U+5186, U+5713, U+A720-A7FF, U+AB30-AB6F;
 }
 
-/* latin -- 28,364 bytes */
+/* latin -- 28,276 bytes */
 @font-face {
   font-family: 'Lisnoti';
   font-style: italic;

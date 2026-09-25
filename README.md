@@ -10,7 +10,7 @@ but with particular consideration given to making it work
 - in maths, science and actuarial contexts (including equations in LuaLaTeX and Word), and
 - for writing computer code.
 
-Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/). The current release is **version&#xA0;2.001** (24&#xA0;September 2026).
+Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/). The current release is **version&#xA0;2.002** (25&#xA0;September 2026).
 
 If you're interested in why Lisnoti exists, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
 
@@ -172,6 +172,20 @@ the following in a command prompt:
 
 > [!NOTE]
 > Unlike the key features section above, the glyphs in this changelog are shown in the *display font* so that they can be copied as Unicode. Bear in mind that this means *they may not look like the actual Lisnoti version*.
+
+## v2.002 (2026-09-25)
+
+### Changed
+
+- The subset sign `⊂` and its relatives (41 glyphs, including `⊃ ⊆ ⊇ ⊄ ⊊ ⋐ ⟃ ⪽ ⪿ ⫅ ⫋ ⫏ ⫓`) have been redrawn as straight arms joined by a semicircle. Previously the arms started to curve well before the end, because the shape was a squashed version of a rounder one.
+    - `⟈ ⟉` were larger than `⊂` and now match it.
+    - In bold, the two cups of `⋐ ⋑` keep the same space between them as in regular.
+    - The dot in `⪽ ⪾` and the ring in `⟃ ⟄` are no longer squashed.
+- In bold and bold italic, the 23 miscellaneous symbols `⌂ ☸ ♀ ♂ ♩ ♪ ♫ ♬ ♭ ♮ ♯ ⚢ ⚣ ⚤ ⚥ ⚦ ⚧ ⚨ ⚩ ⚭ ⚮ ⚯ ⚲` now come from Noto Sans Symbols Bold instead of being thickened artificially from the regular. They match the weight of bold text better and keep their parts distinct.
+
+### Fixed
+
+Windows listed the bold italic style as 'Bold Bold Italic' (for example in Notepad). It is now 'Bold Italic'.
 
 ## v2.001 (2026-09-24)
 
