@@ -1,0 +1,84 @@
+/* Lisnoti Code Version 0.901, one file per style.
+ * SIL Open Font License 1.1 -- https://openfontlicense.org
+ *
+ * The whole font in each style. The subset files in LisnotiCode-woff2 serve the same
+ * font in pieces and are the better choice for most pages.
+ *
+ * WebKit (Safari, and every browser on an iPhone or iPad) gets the same faces again
+ * with calt off, in the @supports block at the end. Its layout and drawing disagree
+ * about a space that calt has narrowed or widened, and text collides. With calt off,
+ * every space and box-drawing character is 380 wide and the hyphen is the full minus.
+ * Do not set font-feature-settings: "calt" 1 on code: it would switch calt back on.
+ */
+
+@font-face {
+  font-family: 'Lisnoti Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(LisnotiCode-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lisnoti Code';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(LisnotiCode-Italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lisnoti Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(LisnotiCode-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lisnoti Code';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(LisnotiCode-BoldItalic.woff2) format('woff2');
+}
+
+@supports (hanging-punctuation: first) {
+
+  @font-face {
+    font-family: 'Lisnoti Code';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(LisnotiCode-Regular.woff2) format('woff2');
+    font-feature-settings: "calt" 0;
+  }
+
+  @font-face {
+    font-family: 'Lisnoti Code';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(LisnotiCode-Italic.woff2) format('woff2');
+    font-feature-settings: "calt" 0;
+  }
+
+  @font-face {
+    font-family: 'Lisnoti Code';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(LisnotiCode-Bold.woff2) format('woff2');
+    font-feature-settings: "calt" 0;
+  }
+
+  @font-face {
+    font-family: 'Lisnoti Code';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(LisnotiCode-BoldItalic.woff2) format('woff2');
+    font-feature-settings: "calt" 0;
+  }
+
+}
