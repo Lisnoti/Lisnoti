@@ -56,7 +56,11 @@ Although Lisnoti contained the full-width, half-width and East Asian characters 
 [^codepage]: Technically the bits declare Korean support, which Lisnoti does not have. Word and other programs will still fall back to another font for any character Lisnoti lacks, so the only effect is that Word will now use Lisnoti for the characters it does have. (JuliaMono does the same.)
 
 > [!TIP]
-> If Word does not offer 'Lisnoti' as an equation font after upgrading from v1, see [Equations in Word](https://lisnoti.com/index.html#equations-in-microsoft-word-on-windows).
+> If Word does not offer 'Lisnoti' as an equation font after upgrading from v1, close all Office programs and run this in a command prompt:
+>
+> ```
+> reg delete "HKCU\Software\Microsoft\Office\16.0\Common\MathFonts" /v Lisnoti /f
+> ```
 
 ## [2.000] - 2026-09-21
 
