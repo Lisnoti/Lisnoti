@@ -5,16 +5,22 @@
 <img src="LisnotiCard.svg" alt="Lisnoti font card" align="right" width="280">
 
 Lisnoti (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use
-but with particular consideration given to making it work
+but with particular consideration given to making it work consistently in maths, science and actuarial contexts. In addition, Lisnoti includes an OpenType `MATH` table, so it can be loaded by `unicode-math` in LuaLaTeX and used for equations in Microsoft Word.
 
-- in maths, science and actuarial contexts (including equations in LuaLaTeX and Word), and
-- for writing computer code.
-
-Lisnoti is available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/). The current release is **version&#xA0;2.003** (25&#xA0;September 2026).
+The initial driver for Lisnoti was the lack of a suitable *proportional* font for writing computer code. While I have used Lisnoti itself as a coding font for a number of years, coding-specific fonts can improve the experience by using ligatures. For this reason, a dedicated **Lisnoti Code** font also exists &ndash; see [below](#lisnoti-code).
 
 If you're interested in why Lisnoti exists, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
 
-## Getting Lisnoti
+Lisnoti fonts are available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/). The current releases are:
+
+|Font family|Folder|Version|Release date|
+|:---|:---|---:|:---:|
+|Lisnoti | `font-Lisnoti` | 2.004 |2026-09-29|
+|Lisnoti Code | `font-LisnotiCode` | 0.902 |2026-09-29|
+
+What has changed in each release is in [changelog-Lisnoti.md](changelog-Lisnoti.md) and [changelog-LisnotiCode.md](changelog-LisnotiCode.md).
+
+## Get Lisnoti
 
 There are three ways to use Lisnoti.
 
@@ -25,7 +31,9 @@ To get Lisnoti to work on your computer, download [Lisnoti-ttf.zip](https://gith
 - Windows: select the font files, right-click and choose *Install*.
 - Mac: open the font files in Font Book.
 
-### 2. Website &ndash; served by the website
+For Lisnoti Code, download [LisnotiCode-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-ttf.zip) instead.
+
+### 2. Website &ndash; fonts served by your own site
 
 Download [Lisnoti-woff2.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-Lisnoti/Lisnoti-woff2.zip), copy the folder into your site, link its stylesheet, and name the font in your CSS:
 
@@ -54,11 +62,13 @@ Either way, leave `lisnoti.css` in the folder with its font files.[^paths]
 `lisnoti.css` serves the font by subset: Latin letters plus common characters, Greek, Cyrillic, maths symbols and so on are separate files, and a page fetches only the subsets for the characters it uses. A page of English text fetches about 34&#xA0;KB for each font weight, and the maths and symbol subsets only as and when needed.
 
 > [!NOTE]
-> If you would rather have one file per style (about 425&#xA0;KB each), or your page sets decomposed phonetic text (a base letter followed by a combining mark, which needs both to come from one file), use [Lisnoti-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-Lisnoti/Lisnoti-woff2-monolithic.zip) instead and link its `lisnoti-full.css`.
+> If you would rather have one file per style (about 425&#xA0;KB each), or your page sets decomposed phonetic text (a base letter followed by a combining mark, which needs both to come from one file), use [Lisnoti-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-Lisnoti/Lisnoti-woff2-monolithic.zip) instead and link its `lisnoti-monolithic.css`.
 
-### 3. Website &ndash; served by lisnoti.com
+### 3. Website &ndash; fonts served by lisnoti.com
 
-You don't need to host anything if you don't want to. Simply point at the stylesheet on lisnoti.com instead, either from your web pages (which means they all require this link in their `<head>` section)
+You don't need to host the fonts locally if you don't want to &ndash; lisnoti.com can do this for you instead. An advantage of this approach is that you will have the latest release on your site.
+
+Simply point at the stylesheet on lisnoti.com instead, either from your web pages (which means they all require this link in their `<head>` section)
 
 ```html
 <link rel="stylesheet" href="https://lisnoti.com/lisnoti.css">
@@ -70,66 +80,63 @@ or from the top of your own stylesheet (which is what lisnoti.com itself does)
 @import url("https://lisnoti.com/lisnoti.css");
 ```
 
-The above links deliver the font by subset (which is usually the optimal approach for web pages). If instead you want the monolithic version use `https://lisnoti.com/lisnoti-full.css`.
+The above links deliver the font by subset (which is usually the optimal approach for web pages). If instead you want the monolithic version use `https://lisnoti.com/lisnoti-monolithic.css`.
 
 See [lisnoti.com](https://lisnoti.com/index.html#using-lisnoti-for-websites) for more details.
 
-### Guide to this repo
+## Guide to this repo
 
-Each family has its own folder, and within it each font file format has its own folder and zip file (for easy download).
+Each font family has its own folder (beginning `font-`), and within that folder, each font file format has its own folder and zip file (for easy download).
 
-| Path | Holds |
-|:--|:--|
-| `font-Lisnoti/Lisnoti-ttf/` | The four desktop fonts: `Lisnoti-Regular.ttf`, `-Italic`, `-Bold`, `-BoldItalic`. |
-| `font-Lisnoti/Lisnoti-woff2/` | The web fonts, cut into subsets: 52 `.woff2` files and `lisnoti.css`, which loads only the subsets a page needs. |
-| `font-Lisnoti/Lisnoti-woff2-monolithic/` | The web fonts whole, one `.woff2` per style, and `lisnoti-full.css`. |
-| `font-LisnotiCode/` | [Lisnoti Code](#lisnoti-code), in the same three folders and zips: `LisnotiCode-ttf/`, `LisnotiCode-woff2/` with `lisnoti-code.css`, and `LisnotiCode-woff2-monolithic/` with `lisnoti-code-full.css`. |
-| `font-LisnotiCodeWS (deprecated)/` | 'Lisnoti Code WS', an older variant built from Lisnoti&#xA0;1.002 in which the space is 40% wider. Lisnoti Code replaces it. |
-| `Licence.txt` | The SIL Open Font Licence plus the notices of the Noto fonts from which Lisnoti is built. It covers both families. |
-| `images/` | The pictures in this readme. |
-
-## Lisnoti Code
-
-Lisnoti Code is Lisnoti set up for writing code. It keeps Lisnoti's whole character set and drawings, drops the `MATH` table, and adds:
-
-- **Spaces that tell words from indentation.** A space between two words is narrow (Lisnoti's own width), and a space in a run, such as indentation or the gap before a comment, is wide (500&#xA0;units, an en space). Where contextual alternates are switched off, as in Safari (see below), every space has one width in between (380&#xA0;units).
-- **Box drawing that lines up with the spaces**, so the output of `tree` and similar tools stays aligned.
-- **A hyphen drawn as a minus**, because in code it usually is one. Between two letters, digits or underscores, as in `max-width` or `n-1`, it is shorter.
-- **Ligatures** for `==` `===` `!=` `!==`, `<=` `>=`, `->` `<-` `=>`, and Julia's pipes `|>` `<|` and their multi-bar forms. A ligature is used only when the whole run of operator characters matches it, so `<==` and `-->` stay as they are.
-
-The current release is **version&#xA0;0.901** (25&#xA0;September 2026), a preview.
-
-To install it, download [LisnotiCode-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-ttf.zip). For a website, download [LisnotiCode-woff2.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-woff2.zip) (or [LisnotiCode-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-woff2-monolithic.zip)) and link its stylesheet as for Lisnoti:
-
-```html
-<link rel="stylesheet" href="/LisnotiCode-woff2/lisnoti-code.css">
-```
-
-```css
-code, pre { font-family: 'Lisnoti Code', monospace; }
-```
-
-### Choosing features
-
-Everything is on by default. The spaces, box drawing and hyphen are contextual alternates (`calt`), and the ligatures are standard ligatures (`liga`). To pick and choose, turn `calt` or `liga` off and turn on the groups you want. Each group is a stylistic set:
-
-| Set | Name | Holds |
-|:--|:--|:--|
-| `ss02` | Short hyphen | the shorter hyphen between letters and digits |
-| `ss03` | Equality ligatures | `==` `===` `!=` `!==` |
-| `ss04` | Relation ligatures | `<=` `>=` |
-| `ss05` | Arrow and pipe ligatures | `->` `<-` `=>` `\|>` `<\|` and the multi-bar pipes |
-
-For example, a page that wants the arrows but no other ligatures would use
-
-```css
-code { font-feature-settings: "liga" 0, "ss05" 1; }
-```
-
-(`ss01` is Lisnoti's chancery script capitals, which Lisnoti Code keeps.)
-
-> [!NOTE]
-> Safari, and every browser on an iPhone or iPad, uses WebKit, which gets the narrow and wide spaces wrong: it lays them out at one width and draws them at another, so text collides. The stylesheets therefore switch `calt` off in WebKit, which gives every space and box-drawing character 380&#xA0;units and the full-length hyphen. Do not set `"calt" 1` on code in your own CSS, as that switches it back on.
+<table>
+<thead>
+<tr>
+<th align="left">Top-level folder</th>
+<th align="left">Item</th>
+<th align="left">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left" rowspan="3"><code>font-Lisnoti/</code></td>
+<td align="left"><code>Lisnoti-ttf/</code></td>
+<td align="left">Desktop font files</td>
+</tr>
+<tr>
+<td align="left"><code>Lisnoti-woff2/</code></td>
+<td align="left">Subset web font files and <code>lisnoti.css</code></td>
+</tr>
+<tr>
+<td align="left"><code>Lisnoti-woff2-monolithic/</code></td>
+<td align="left">One web font file per style and <code>lisnoti-monolithic.css</code></td>
+</tr>
+<tr>
+<td align="left" rowspan="3"><code>font-LisnotiCode/</code></td>
+<td align="left"><code>LisnotiCode-ttf/</code></td>
+<td align="left">Desktop coding font files</td>
+</tr>
+<tr>
+<td align="left"><code>LisnotiCode-woff2/</code></td>
+<td align="left">Subset web coding font files and <code>lisnoti-code.css</code></td>
+</tr>
+<tr>
+<td align="left"><code>LisnotiCode-woff2-monolithic/</code></td>
+<td align="left">One web coding font file per style and <code>lisnoti-code-monolithic.css</code></td>
+</tr>
+<tr>
+<td align="left"><code>font-LisnotiCodeWS (deprecated)/</code></td>
+<td align="left" colspan="2">'Lisnoti Code WS', a variant built from Lisnoti&nbsp;1.002 with a 40% wider space. Superseded by Lisnoti Code.</td>
+</tr>
+<tr>
+<td align="left"><code>Licence.txt</code></td>
+<td align="left" colspan="2">SIL Open Font Licence plus the notices of the Noto fonts from which the Lisnoti family is built. The licence covers all font families.</td>
+</tr>
+<tr>
+<td align="left"><code>images/</code></td>
+<td align="left" colspan="2">The images in this README.</td>
+</tr>
+</tbody>
+</table>
 
 ## Feedback
 
@@ -137,18 +144,18 @@ If you have comments on Lisnoti, please use [the GitHub repo discussions page](h
 
 Please bear in mind that I am not a typography expert, just a frustrated user.
 
-## Key features
+## Lisnoti's key features
 
 > [!NOTE]
-> The Lisnoti characters displayed below use pictures because GitHub renders repo files in its own font. The same characters are set in Lisnoti itself at [lisnoti.com](https://lisnoti.com/index.html#key-features).
+> The Lisnoti characters displayed below use pictures because GitHub renders repo files in its own font. [lisnoti.com](https://lisnoti.com/index.html#key-features) shows them set in Lisnoti itself.
 
-Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto), but with the following adaptions:
+Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto), but with the following adaptations:
 
-1. Reliable distinction of upper case `I`, lower case `l` and one `1`, and of upper case `O` and zero `0`, in every style:
+1. Reliable distinction of upper case `I`, lower case `l` and one `1`, and of upper case `O` and zero `0`:
 
     <picture><source media="(prefers-color-scheme: dark)" srcset="images/distinct-dark.svg"><img alt="Il1 O0 in regular, italic, bold and bold italic" src="images/distinct.svg" height="13"></picture>
 
-1. Consistent arithmetic, comparison, logic, set, *n*-ary and other maths operators, all sitting on one maths axis, e.g.
+1. Consistent arithmetic, comparison, logic, set, *n*-ary and other maths operators, all on the same maths axis, e.g.
 
     - arithmetic: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-arithmetic-dark.svg"><img alt="− × ÷ ± ∓ ∞" src="images/ops-arithmetic.svg" height="10"></picture>
     - comparison: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-comparison-dark.svg"><img alt="≤ ≠ ≥ ≈ ≡ ≢ ∝" src="images/ops-comparison.svg" height="11"></picture>
@@ -157,7 +164,7 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto)
     - *n*-ary: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-nary-dark.svg"><img alt="∑ ∏ ∐ ⋀ ⋁ ⋂ ⋃ ⨀ ⨁ ⨂" src="images/ops-nary.svg" height="18"></picture>
     - other: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-other-dark.svg"><img alt="∫ ∂ √ Δ ∇ ∀ ∃" src="images/ops-other.svg" height="19"></picture>
 
-1. An OpenType `MATH` table, so Lisnoti can be chosen as the equation font in Word and loaded by `unicode-math` in LuaLaTeX: fractions, radicals, big operators with limits, stretchy brackets and accents are all set from the font's own data.
+1. An OpenType `MATH` table, so Lisnoti can be chosen as the equation font in Word[^word-issues] and loaded by `unicode-math` in LuaLaTeX: fractions, radicals, big operators with limits, stretchy brackets and accents are all set from the font's own data.
 
 1. Greek and Cyrillic letters &ndash; maths and logic make frequent use of Greek letters and occasionally Cyrillic ones too.
 
@@ -167,7 +174,7 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto)
     - superscript: <picture><source media="(prefers-color-scheme: dark)" srcset="images/superscript-dark.svg"><img alt="x⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ𐞥ʳˢᵗᵘᵛʷˣʸᶻᴬᴮꟲᴰᴱꟳᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾꟴᴿᵀᵁⱽᵂx" src="images/superscript.svg" height="15"></picture>
     - subscript: <picture><source media="(prefers-color-scheme: dark)" srcset="images/subscript-dark.svg"><img alt="x₀₁₂₃₄₅₆₇₈₉₍₎₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥ₝ₓ₞₟x" src="images/subscript.svg" height="14"></picture>
 
-1. A reasonable selection of symbols, including
+1. A selection of useful symbols, including
 
     - squares, diamonds, rectangles, triangles, circles and stars: <picture><source media="(prefers-color-scheme: dark)" srcset="images/shapes-dark.svg"><img alt="■□▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◊○◌●◦◯◻◼◽◾⚪⚫⚬★☆" src="images/shapes.svg" height="19"></picture>
     - lots of arrows: <picture><source media="(prefers-color-scheme: dark)" srcset="images/arrows-dark.svg"><img alt="←↑→↓↔↕ ↖↗↘↙ ⇄ ⇅ ⇵ ⇆ ⇋⇌ ⇐ ⇒⇔ ⇦⇧⇨⇩ ￩￪￫￬" src="images/arrows.svg" height="17"></picture>
@@ -177,7 +184,7 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto)
     - currency, the whole Unicode currency block U+20A0 to U+20C1 among them: <picture><source media="(prefers-color-scheme: dark)" srcset="images/currency-dark.svg"><img alt="$ £ € ¥ ₹ ₽ ₩ ৳ ฿ ⃁ ₿" src="images/currency.svg" height="15"></picture>
     - misc but useful: <picture><source media="(prefers-color-scheme: dark)" srcset="images/misc-dark.svg"><img alt="⌂☸ ♩♪♫♬♭♮♯ ♀♂⚢⚣⚤⚥⚦⚧⚨⚩⚭⚮⚯⚲ ⌘ ␣ ☉ ♿ 円圓" src="images/misc.svg" height="17"></picture>
 
-1. All the operators [parsed by Julia](https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm) (which is itself a good test of a technical font).
+1. All operators [parsed by Julia](https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm) (which is itself a good test of a technical font).
 
 1. [Unicode mathematical alphanumeric symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols):
 
@@ -196,117 +203,79 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto)
 > [!TIP]
 > If you want the above but with a monospaced font, then take a look at [Julia Mono](https://juliamono.netlify.app/).
 
-## Equations in Microsoft Word on Windows
+[^word-issues]: There are a couple of things to be aware of when using Lisnoti fonts in Word:
+    - Word shows the full-width, half-width and East Asian characters `｛｝￩￪￫￬〒〰円圓` in another font, even though Lisnoti has them. Word draws these characters only in fonts that declare East Asian support, but doing that causes problems in Word, such as wider line spacing.
+    - If **Lisnoti is not shown as a font option for equations** and you have previously installed Lisnoti v1 then try closing all Office programs, and then the following in a command prompt:
+        ```
+        reg delete "HKCU\Software\Microsoft\Office\16.0\Common\MathFonts" /v Lisnoti /f
+        ```
 
-Lisnoti can now be used for equations in Word, but there are two potential gotchas that it's worth being aware of:
+<a id="lisnoti-code"></a>
+## Lisnoti Code
 
-1. **Always select 'Lisnoti', *not* '@Lisnoti'**. Windows provides the '@Lisnoti' option because of how it handles fonts that include East Asian characters, but this is not what you want.
+**Lisnoti Code** is Lisnoti with specific adjustments for writing code. It retains Lisnoti's character set and drawings, drops the `MATH` table, and adds the following features:
 
-2. If **Lisnoti is not shown as a font option for equations** and you have previously installed Lisnoti v1 then try
-closing all Office programs, and then
-the following in a command prompt:
+- **Spaces that tell words from indentation.** A space between two words is narrow (Lisnoti's own width), and a space in a run, such as indentation or the gap before a comment, is wide (500&#xA0;units, an en space). Where contextual alternates are switched off, as in Safari (see below), every space has one width in between (380&#xA0;units).
+- **A hyphen drawn as a minus**, because in code it usually is one. Between two letters, digits or underscores, as in `max-width` or `n-1`, it is shorter.
+- **Ligatures** for `==` `===` `!=` `!==`, `<=` `>=`, `->` `<-` `=>`, and Julia's pipes `|>` `<|` and their multi-bar forms. A ligature is used only when the whole run of operator characters matches it, so `<==` and `-->` stay as they are.
+- **Box drawing that lines up with the spaces**, so the output of `tree` and similar tools stays aligned.
+
+Getting Lisnoti Code is similar to [getting Lisnoti](#get-lisnoti):
+- To install it, download [LisnotiCode-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-ttf.zip).
+- For a website, download [LisnotiCode-woff2.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-woff2.zip) and link its stylesheet:
+
+    ```html
+    <link rel="stylesheet" href="/LisnotiCode-woff2/lisnoti-code.css">
     ```
-    reg delete "HKCU\Software\Microsoft\Office\16.0\Common\MathFonts" /v Lisnoti /f
+
+    ```css
+    code, pre { font-family: 'Lisnoti Code', monospace; }
     ```
 
+    For one file per style, use [LisnotiCode-woff2-monolithic.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-woff2-monolithic.zip) instead and link its `lisnoti-code-monolithic.css`.
 
---------------------------------
+### Choosing Lisnoti Code features
 
-# Changelog
+Whether *contextual alternates* and *standard ligatures* are on or off will depend on the application:
+
+- **VS Code** turns both off unless told otherwise. In `settings.json` set `"editor.fontFamily": "Lisnoti Code"` and `"editor.fontLigatures": true`, or give a feature list instead of `true`, e.g. `"'liga' off, 'calt' on, 'ss05' on"` for the spacing and the arrows only.
+- **Word** also turns both off by default. In the Font dialog (Ctrl+D), *Advanced* tab: *Ligatures: Standard Only* turns on `liga`, the *Use Contextual Alternates* box turns on `calt`, and *Stylistic sets* picks one set.
+- **Visual Studio** turns both on and has no setting to turn them off.
+
+The *contextual alternates* (`calt`) features are
+- vary space length &ndash; wide when next to whitespace and normal otherwise,
+- ensure box drawing character widths match the width of a space in a whitespace context, and
+- use true hyphen between letters and digits.
 
 > [!NOTE]
-> Unlike the key features section above, the glyphs in this changelog are shown in the *display font* so that they can be copied as Unicode. Bear in mind that this means *they may not look like the actual Lisnoti version*.
+> When `calt` is off, the same space width is used everywhere. This space width is
+> neither the wide space used in a whitespace context 
+> nor the normal space that looks correct between adjacent words and symbols, 
+> but somewhere between the two. (It is similar to the now deprecated Lisnoti Code WS font.)
 
-## v2.003 (2026-09-25)
+The *standard ligatures* (`liga`) features are
+- equality ligatures for `==`, `===`, `!=` and `!==`,
+- relation ligatures for `<=` and `>=`, and
+- arrow and pipe ligatures for `->`, `<-`, `=>` and `|>` and friends.
 
-### Fixed
+If your application allows, you can pick and choose between the above features by turning off `calt` and/or `liga`, and turning on one or more of the following *stylistic set*s:
 
-- Equations on web pages using `lisnoti.css` (the version of the web font split into subsets) now get large operators and stretchy brackets. Previously `⋃ ⋂ ∐ ⋀ ⋁ ⨀ ⨁ ⨂ ⨄ ⨆ ⅀ ∬ ∭ ∮` stayed at text size in display equations, and `⟨ ⟩ ⌈ ⌉ ⌊ ⌋ ⟦ ⟧ ⟪ ⟫` did not stretch around a fraction. The fix adds these characters, the horizontal brackets `⎴ ⎵ ⏜ ⏝ ⏞ ⏟` and seven stretchy accents to the Latin subset, which is the file a browser takes stretching information from. The monolithic version (`lisnoti-full.css`) was never affected.
-- Stray points left along straight edges when the bold faces were made have been removed. They could not be seen, but they could confuse software that looks for corners. The bold `>` and 68 other bold relations such as `≥ ≫ ⪈` were among those affected. The regular and italic faces had a few as well.
+| Stylistic set | Name | Holds |
+|:--|:--|:--|
+| `ss02` | Short hyphen | The shorter (true) hyphen applied between letters and digits |
+| `ss03` | Equality ligatures | `==` `===` `!=` `!==` |
+| `ss04` | Relation ligatures | `<=` `>=` |
+| `ss05` | Arrow and pipe ligatures | `->` `<-` `=>` `\|>` `<\|` and the multi-bar pipes |
 
-## v2.002 (2026-09-25)
+For example, a web page that wants the arrows but no other ligatures would use
 
-### Changed
+```css
+code { font-feature-settings: "liga" 0, "ss05" 1; }
+```
 
-- The subset sign `⊂` and its relatives (41 glyphs, including `⊃ ⊆ ⊇ ⊄ ⊊ ⋐ ⟃ ⪽ ⪿ ⫅ ⫋ ⫏ ⫓`) have been redrawn as straight arms joined by a semicircle. Previously the arms started to curve well before the end, because the shape was a squashed version of a rounder one.
-    - `⟈ ⟉` were larger than `⊂` and now match it.
-    - In bold, the two cups of `⋐ ⋑` keep the same space between them as in regular.
-    - The dot in `⪽ ⪾` and the ring in `⟃ ⟄` are no longer squashed.
-- In bold and bold italic, the 23 miscellaneous symbols `⌂ ☸ ♀ ♂ ♩ ♪ ♫ ♬ ♭ ♮ ♯ ⚢ ⚣ ⚤ ⚥ ⚦ ⚧ ⚨ ⚩ ⚭ ⚮ ⚯ ⚲` now come from Noto Sans Symbols Bold instead of being thickened artificially from the regular. They match the weight of bold text better and keep their parts distinct.
-
-### Fixed
-
-Windows listed the bold italic style as 'Bold Bold Italic' (for example in Notepad). It is now 'Bold Italic'.
-
-## v2.001 (2026-09-24)
-
-### Fixed
-
-Corrected the vertical alignment of `∞ ⧜ ⫙ ⟒` and the colon component of the `≔ ≕ ⩴` glyphs to match the maths axis (same as `=`).
-
-The proportional to symbol, `∝`, was redrawn (based on the Noto Sans Math symbol), partly to help distinguish it from the Greek alpha `α`.
-
-Although Lisnoti contained the fullwidth, halfwidth and East Asian characters `｛ ｝￩￪￫￬〒〰円圓`, they were not displayed by Microsoft Word because it categorises them all as East Asian and will only use fonts that declare they support this in the OS/2 field `ulCodePageRange`. The relevant bits have been turned on[^codepage] for Lisnoti&#xA0;v2.001 and Word now displays them in Lisnoti.
-
-[^codepage]: Technically the bits declare Korean support, which Lisnoti does not have. Word and other programs will still fall back to another font for any character Lisnoti lacks, so the only effect is that Word will now use Lisnoti for the characters it does have. (JuliaMono does the same.)
-
-> [!TIP]
-> If Word does not offer Lisnoti as an equation font after upgrading from v1, see [Equations in Word](#equations-in-microsoft-word-on-windows).
-
-## v2.000 (2026-09-21)
-
-Lisnoti&#xA0;v2.000 is a complete rebuild of the font:
-
-### Changed
-
-- The base is [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)&#xA0;v2.015 (previously v2.013).
-
-- The maths donor is [Noto Sans Math](https://fonts.google.com/noto/specimen/Noto+Sans+Math)&#xA0;v3.000, Khaled Hosny's 2024 redesign:
-    - This shifted the maths vertical alignment axis and redrew and added many glyphs.
-    - Notwithstanding Noto's redesign, Lisnoti has itself redrawn the *n*-ary operators, radical sign, tick and cross family and a few other glyphs for consistency and aesthetics.
-    - Lisnoti now incorporates an OpenType `MATH` table, built using the same pattern as Noto Sans Math but with Lisnoti glyph measurements. This means that **Lisnoti can now be used to typeset equations**.
-- The web font files are now subset by script to optimise web page access. For instance, a Latin-only page downloads about 27&#xA0;KB per weight for Lisnoti&#xA0;v2.000, against 350&#xA0;KB for the whole font previously, i.e. a reduction in download size of over 90%. (The previous monolithic approach is still available if required.)
-
-
-### Added
-
-- Three currency symbols were added, the last of which completes Lisnoti's coverage of the Unicode currency block, U+20A0 to U+20C1:
-    - `৳` (U+09F3) Bangladeshi taka / Bengali rupee sign (from Noto Sans Bengali).
-    - `฿` (U+0E3F) Thai baht sign (from Noto Sans Thai).
-    - `⃁` (U+20C1) Saudi riyal sign (drawn from the Saudi Central Bank's published artwork).
-
-### Removed
-
-- WOFF ('WOFF&#xA0;1') files are no longer included on the basis that every browser now in use supports WOFF2.
-
-## v1.001 to v1.002 (2023 to 2025)
-
-The original Lisnoti, built by hand in [FontForge](https://fontforge.org/) from
-[Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) and four of its siblings.
-v1.001 was first released in this repository in September 2023 and v1.002 was first released in January 2024 and then re-released four more times up to July 2025 under the same version number[^version-bumping].
-
-[^version-bumping]: Using the same version for different releases of Lisnoti v1 was an oversight. In future, new releases will have higher version numbers.
-
-These initial releases included the following core features of Lisnoti:
-
-- **Clear visual distinction between easily confused characters.**
-    - A tail was added to lower case `l` to distinguish it from upper case `I`.
-    - A dot was added to the interior of zero `0` to distinguish it from upper case `O`.
-    - Lower case alpha `α` was replaced with Noto Sans JP's, because Noto Sans's is too close to a roman `a` in italic.
-    
-    These changes were propagated e.g. to the `ﬂ` and `ﬄ` ligatures and accented forms. 
-
-- **Real minus sign.** Noto Sans's italics have no minus sign `−` (U+2212) of their own (they use the hyphen!). Lisnoti provides true minus signs for all styles.
-
-- **Consistent sub and superscripts.** Noto Sans's sub and superscripts are out of alignment with each other,
-  so the roman ones were rebuilt from the full-size letters. Later Lisnoti versions added subscripts `w`, `y` and `z` due in Unicode&#xA0;18.0.
-
-- **Maths symbol consistency.** The *n*-ary `⋀ ⋁ ⋂ ⋃` were redrawn based on `∏` to be visually distinct from their binary partners. `∩` and `∪` were made shorter for aesthetic reasons (and to match logical operators). Noto Sans Math's arrows were scaled up by 25%, because they were too small next to the other operators. `∝` and `∞` were enlarged and reshaped by hand.
-
-- **Kerning for code.** `r`/`n` were separated so as not to be read as `m`. The aggressive Noto Sans `r`/`.` pair kerning was halved so that a full stop in `other.value` stays visible. Brackets of the same orientation were spaced apart. Combinations of `'` and `"` were separated so that `''` does not read as `"`.
-
-- **Incorporate additional symbols.** In order to reduce risk of random font substitution, Lisnoti incorporated a selection of shapes, arrows, chess, ticks and box drawings from
-  [Noto Sans Symbols](https://fonts.google.com/noto/specimen/Noto+Sans+Symbols),
-  [Noto Sans Symbols 2](https://fonts.google.com/noto/specimen/Noto+Sans+Symbols+2) and
-  [Noto Sans JP](https://fonts.google.com/noto/specimen/Noto+Sans+JP). Where no bold existed, it was created using emboldening.
+> [!WARNING]
+> Do not set `"calt" 1` (i.e. switch it on) in your own CSS.
+> 
+> Safari, and every web browser on an iPhone or iPad, uses WebKit, which gets the narrow and wide spacing feature wrong, resulting in text colliding.
+> To protect against this, the Lisnoti Code stylesheets switch `calt` off in WebKit so as to use the in-between space. If you then set `calt` back on, text on your web pages may collide in those browsers.
 
