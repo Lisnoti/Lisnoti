@@ -228,7 +228,7 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 
 - **Spaces that tell words from indentation.** A space between two words is narrow (Lisnoti's own width), and a space in a run, such as indentation or the gap before a comment, is wide (500&#xA0;units, an en space). Where contextual alternates are switched off, as in Safari (see below), every space has one width in between (380&#xA0;units).
 - **A hyphen drawn as a minus**, because in code it usually is one. Between two letters, digits or underscores, as in `max-width` or `n-1`, it is shorter.
-- **Ligatures** for `==` `===` `!=` `!==`, `<=` `>=`, `->` `<-` `=>`, and Julia's pipes `|>` `<|` and their multi-bar forms. A ligature is used only when the whole run of operator characters matches it, so `<==` and `-->` stay as they are.
+- **Ligatures** for `==` `===` `!=` `!==`, `<=` `>=`, `->` `<-` `=>`, and F#/Julia/R pipes `|>` `<|` and their multi-bar forms. A ligature is used only when the whole run of operator characters matches it, so `<==` and `-->` stay as they are.
 - **Box drawing that lines up with the spaces**, so the output of `tree` and similar tools stays aligned.
 
 Getting Lisnoti Code is similar to [getting Lisnoti](#get-lisnoti):
