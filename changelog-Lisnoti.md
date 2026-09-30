@@ -6,6 +6,17 @@
 > The glyphs in this changelog are shown in the *local display font*, which
 > means that *they may not look like the actual Lisnoti version*.
 
+## [Unreleased]
+
+- Use alpha `ɑ` (U+0251) glyph pattern as the basis for
+    - `ᵅ` (U+1D45)
+    - `ꭤ` (U+AB64)
+    - check for other glyphs based on alpha
+
+- Use common subset `⊂` (U+2282) glyph pattern as basis for
+    - `⥹` (U+2979)
+    - `⥺` (U+297A)
+    - `⥻` (U+297B)
 
 
 ## [2.004] - 2026-09-29
