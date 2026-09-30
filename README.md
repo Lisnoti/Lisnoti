@@ -1,10 +1,13 @@
 # READ ME
 
-*This repo contains the font files for Lisnoti and for [Lisnoti Code](#lisnoti-code), its variant for writing code.*
+> [!NOTE]
+> This repo contains the font files for [**Lisnoti**](https://lisnoti.com/) and [**Lisnoti Code**](https://lisnoti.com/code/).
+> 
+> For an introduction to the fonts and a chance to try them out go to the [**lisnoti.com**](https://lisnoti.com/) website.
 
 <img src="LisnotiCard.svg" alt="Lisnoti font card" align="right" width="280">
 
-Lisnoti (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use
+**Lisnoti** (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use
 but with particular consideration given to making it work consistently in maths, science and actuarial contexts. In addition, Lisnoti includes an OpenType `MATH` table, so it can be loaded by `unicode-math` in LuaLaTeX and used for equations in Microsoft Word.
 
 The initial driver for Lisnoti was the lack of a suitable *proportional* font for writing computer code. While I have used Lisnoti itself as a coding font for a number of years, coding-specific fonts can improve the experience by using ligatures. For this reason, a dedicated **Lisnoti Code** font also exists &ndash; see [below](#lisnoti-code).
@@ -138,6 +141,14 @@ Each font family has its own folder (beginning `font-`), and within that folder,
 </tbody>
 </table>
 
+## Credit
+
+Lisnoti and Lisnoti Code derive from Google's admirable
+[Noto](https://fonts.google.com/noto) fonts.
+
+Lisnoti's math functionality
+derives from Khaled Hosny's wholesale redesign of [Noto Sans Math](https://fonts.google.com/noto/specimen/Noto+Sans+Math) in 2024.
+
 ## Feedback
 
 If you have comments on Lisnoti, please use [the GitHub repo discussions page](https://github.com/Lisnoti/Lisnoti/discussions).
@@ -149,13 +160,13 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 > [!NOTE]
 > The Lisnoti characters displayed below use pictures because GitHub renders repo files in its own font. [lisnoti.com](https://lisnoti.com/index.html#key-features) shows them set in Lisnoti itself.
 
-Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto), but with the following adaptations:
+[**Lisnoti**](https://lisnoti.com/) is derived from [Noto's sans serif fonts](https://fonts.google.com/noto), but with the following adaptations:
 
 1. Reliable distinction of upper case `I`, lower case `l` and one `1`, and of upper case `O` and zero `0`:
 
     <picture><source media="(prefers-color-scheme: dark)" srcset="images/distinct-dark.svg"><img alt="Il1 O0 in regular, italic, bold and bold italic" src="images/distinct.svg" height="13"></picture>
 
-1. Consistent arithmetic, comparison, logic, set, *n*-ary and other maths operators, all on the same maths axis, e.g.
+1. Consistent arithmetic, comparison, logic, set, *n*-ary and other maths operators, all on the same maths axis and in a number of cases completely redrawn compared with the Noto source, e.g.
 
     - arithmetic: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-arithmetic-dark.svg"><img alt="− × ÷ ± ∓ ∞" src="images/ops-arithmetic.svg" height="10"></picture>
     - comparison: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-comparison-dark.svg"><img alt="≤ ≠ ≥ ≈ ≡ ≢ ∝" src="images/ops-comparison.svg" height="11"></picture>
@@ -213,7 +224,7 @@ Lisnoti is derived from [Noto's sans serif fonts](https://fonts.google.com/noto)
 <a id="lisnoti-code"></a>
 ## Lisnoti Code
 
-**Lisnoti Code** is Lisnoti with specific adjustments for writing code. It retains Lisnoti's character set and drawings, drops the `MATH` table, and adds the following features:
+[**Lisnoti Code**](https://lisnoti.com/code/) is Lisnoti with specific adjustments for writing code. It retains Lisnoti's character set and drawings, drops the `MATH` table, and adds the following features:
 
 - **Spaces that tell words from indentation.** A space between two words is narrow (Lisnoti's own width), and a space in a run, such as indentation or the gap before a comment, is wide (500&#xA0;units, an en space). Where contextual alternates are switched off, as in Safari (see below), every space has one width in between (380&#xA0;units).
 - **A hyphen drawn as a minus**, because in code it usually is one. Between two letters, digits or underscores, as in `max-width` or `n-1`, it is shorter.
@@ -278,4 +289,3 @@ code { font-feature-settings: "liga" 0, "ss05" 1; }
 > 
 > Safari, and every web browser on an iPhone or iPad, uses WebKit, which gets the narrow and wide spacing feature wrong, resulting in text colliding.
 > To protect against this, the Lisnoti Code stylesheets switch `calt` off in WebKit so as to use the in-between space. If you then set `calt` back on, text on your web pages may collide in those browsers.
-
