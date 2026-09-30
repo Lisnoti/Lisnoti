@@ -5,7 +5,7 @@
 > 
 > For an introduction to the fonts and a chance to try them out go to the [**lisnoti.com**](https://lisnoti.com/) website.
 
-<img src="LisnotiCard.svg" alt="Lisnoti font card" align="right" width="280">
+<img src="images/lisnoti-card.svg" alt="Lisnoti font card" align="right" width="280">
 
 **Lisnoti** (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use
 but with particular consideration given to making it work consistently in maths, science and actuarial contexts. In addition, Lisnoti includes an OpenType `MATH` table, so it can be loaded by `unicode-math` in LuaLaTeX and used for equations in Microsoft Word.
@@ -135,7 +135,7 @@ Each font family has its own folder (beginning `font-`), and within that folder,
 <td align="left" colspan="2">SIL Open Font Licence plus the notices of the Noto fonts from which the Lisnoti family is built. The licence covers all font families.</td>
 </tr>
 <tr>
-<td align="left"><code>images/</code></td>
+<td align="left"><code>glyph-images/</code></td>
 <td align="left" colspan="2">The images in this README.</td>
 </tr>
 </tbody>
@@ -164,16 +164,16 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 
 1. Reliable distinction of upper case `I`, lower case `l` and one `1`, and of upper case `O` and zero `0`:
 
-    <picture><source media="(prefers-color-scheme: dark)" srcset="images/distinct-dark.svg"><img alt="Il1 O0 in regular, italic, bold and bold italic" src="images/distinct.svg" height="13"></picture>
+    <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/distinct-dark.svg"><img alt="Il1 O0 in regular, italic, bold and bold italic" src="glyph-images/distinct.svg" height="13"></picture>
 
 1. Consistent arithmetic, comparison, logic, set, *n*-ary and other maths operators, all on the same maths axis and in a number of cases completely redrawn compared with the Noto source, e.g.
 
-    - arithmetic: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-arithmetic-dark.svg"><img alt="− × ÷ ± ∓ ∞" src="images/ops-arithmetic.svg" height="10"></picture>
-    - comparison: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-comparison-dark.svg"><img alt="≤ ≠ ≥ ≈ ≡ ≢ ∝" src="images/ops-comparison.svg" height="11"></picture>
-    - logic: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-logic-dark.svg"><img alt="¬ ∧ ∨ ⊻ ⊤ ⊥ ⊦" src="images/ops-logic.svg" height="11"></picture>
-    - set: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-set-dark.svg"><img alt="∩ ∪ ∈ ∉ ⊂ ⊃ ⊆ ⊇ ∅" src="images/ops-set.svg" height="14"></picture>
-    - *n*-ary: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-nary-dark.svg"><img alt="∑ ∏ ∐ ⋀ ⋁ ⋂ ⋃ ⨀ ⨁ ⨂" src="images/ops-nary.svg" height="18"></picture>
-    - other: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ops-other-dark.svg"><img alt="∫ ∂ √ Δ ∇ ∀ ∃" src="images/ops-other.svg" height="19"></picture>
+    - arithmetic: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ops-arithmetic-dark.svg"><img alt="− × ÷ ± ∓ ∞" src="glyph-images/ops-arithmetic.svg" height="10"></picture>
+    - comparison: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ops-comparison-dark.svg"><img alt="≤ ≠ ≥ ≈ ≡ ≢ ∝" src="glyph-images/ops-comparison.svg" height="11"></picture>
+    - logic: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ops-logic-dark.svg"><img alt="¬ ∧ ∨ ⊻ ⊤ ⊥ ⊦" src="glyph-images/ops-logic.svg" height="11"></picture>
+    - set: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ops-set-dark.svg"><img alt="∩ ∪ ∈ ∉ ⊂ ⊃ ⊆ ⊇ ∅" src="glyph-images/ops-set.svg" height="14"></picture>
+    - *n*-ary: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ops-nary-dark.svg"><img alt="∑ ∏ ∐ ⋀ ⋁ ⋂ ⋃ ⨀ ⨁ ⨂" src="glyph-images/ops-nary.svg" height="18"></picture>
+    - other: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ops-other-dark.svg"><img alt="∫ ∂ √ Δ ∇ ∀ ∃" src="glyph-images/ops-other.svg" height="19"></picture>
 
 1. An OpenType `MATH` table, so Lisnoti can be chosen as the equation font in Word[^word-issues] and loaded by `unicode-math` in LuaLaTeX: fractions, radicals, big operators with limits, stretchy brackets and accents are all set from the font's own data.
 
@@ -181,35 +181,35 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 
 1. Consistently formatted digit and &ndash; if available &ndash; Roman letter sub and superscripts:
 
-    - examples: <picture><source media="(prefers-color-scheme: dark)" srcset="images/scripts-example-dark.svg"><img alt="x² + y² = r², f⁽ⁿ⁾(x), aᵢⱼ, H₂O, xₙ₊₁" src="images/scripts-example.svg" height="19"></picture>
-    - superscript: <picture><source media="(prefers-color-scheme: dark)" srcset="images/superscript-dark.svg"><img alt="x⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ𐞥ʳˢᵗᵘᵛʷˣʸᶻᴬᴮꟲᴰᴱꟳᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾꟴᴿᵀᵁⱽᵂx" src="images/superscript.svg" height="15"></picture>
-    - subscript: <picture><source media="(prefers-color-scheme: dark)" srcset="images/subscript-dark.svg"><img alt="x₀₁₂₃₄₅₆₇₈₉₍₎₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥ₝ₓ₞₟x" src="images/subscript.svg" height="14"></picture>
+    - examples: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/scripts-example-dark.svg"><img alt="x² + y² = r², f⁽ⁿ⁾(x), aᵢⱼ, H₂O, xₙ₊₁" src="glyph-images/scripts-example.svg" height="19"></picture>
+    - superscript: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/superscript-dark.svg"><img alt="x⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖ𐞥ʳˢᵗᵘᵛʷˣʸᶻᴬᴮꟲᴰᴱꟳᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾꟴᴿᵀᵁⱽᵂx" src="glyph-images/superscript.svg" height="15"></picture>
+    - subscript: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/subscript-dark.svg"><img alt="x₀₁₂₃₄₅₆₇₈₉₍₎₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥ₝ₓ₞₟x" src="glyph-images/subscript.svg" height="14"></picture>
 
 1. A selection of useful symbols, including
 
-    - squares, diamonds, rectangles, triangles, circles and stars: <picture><source media="(prefers-color-scheme: dark)" srcset="images/shapes-dark.svg"><img alt="■□▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◊○◌●◦◯◻◼◽◾⚪⚫⚬★☆" src="images/shapes.svg" height="19"></picture>
-    - lots of arrows: <picture><source media="(prefers-color-scheme: dark)" srcset="images/arrows-dark.svg"><img alt="←↑→↓↔↕ ↖↗↘↙ ⇄ ⇅ ⇵ ⇆ ⇋⇌ ⇐ ⇒⇔ ⇦⇧⇨⇩ ￩￪￫￬" src="images/arrows.svg" height="17"></picture>
-    - ticks and crosses: <picture><source media="(prefers-color-scheme: dark)" srcset="images/ticks-dark.svg"><img alt="☐☑☒ ✓✔✕✖✗✘" src="images/ticks.svg" height="12"></picture>
-    - box drawing: <picture><source media="(prefers-color-scheme: dark)" srcset="images/box-drawing-dark.svg"><img alt="─│┌┐└┘├┤┬┴┼╭╮╯╰╱╲╳╴╵╶╷" src="images/box-drawing.svg" height="17"></picture>
-    - game characters: <picture><source media="(prefers-color-scheme: dark)" srcset="images/games-dark.svg"><img alt="♔♕♖♗♘♙♚♛♜♝♞♟ ♠♡♢♣♤♥♦♧" src="images/games.svg" height="14"></picture>
-    - currency, the whole Unicode currency block U+20A0 to U+20C1 among them: <picture><source media="(prefers-color-scheme: dark)" srcset="images/currency-dark.svg"><img alt="$ £ € ¥ ₹ ₽ ₩ ৳ ฿ ⃁ ₿" src="images/currency.svg" height="15"></picture>
-    - misc but useful: <picture><source media="(prefers-color-scheme: dark)" srcset="images/misc-dark.svg"><img alt="⌂☸ ♩♪♫♬♭♮♯ ♀♂⚢⚣⚤⚥⚦⚧⚨⚩⚭⚮⚯⚲ ⌘ ␣ ☉ ♿ 円圓" src="images/misc.svg" height="17"></picture>
+    - squares, diamonds, rectangles, triangles, circles and stars: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/shapes-dark.svg"><img alt="■□▪▫▬▭▮▯▰▱▲△▴▵▶▷▸▹►▻▼▽▾▿◀◁◂◃◄◅◆◇◊○◌●◦◯◻◼◽◾⚪⚫⚬★☆" src="glyph-images/shapes.svg" height="19"></picture>
+    - lots of arrows: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/arrows-dark.svg"><img alt="←↑→↓↔↕ ↖↗↘↙ ⇄ ⇅ ⇵ ⇆ ⇋⇌ ⇐ ⇒⇔ ⇦⇧⇨⇩ ￩￪￫￬" src="glyph-images/arrows.svg" height="17"></picture>
+    - ticks and crosses: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/ticks-dark.svg"><img alt="☐☑☒ ✓✔✕✖✗✘" src="glyph-images/ticks.svg" height="12"></picture>
+    - box drawing: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/box-drawing-dark.svg"><img alt="─│┌┐└┘├┤┬┴┼╭╮╯╰╱╲╳╴╵╶╷" src="glyph-images/box-drawing.svg" height="17"></picture>
+    - game characters: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/games-dark.svg"><img alt="♔♕♖♗♘♙♚♛♜♝♞♟ ♠♡♢♣♤♥♦♧" src="glyph-images/games.svg" height="14"></picture>
+    - currency, the whole Unicode currency block U+20A0 to U+20C1 among them: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/currency-dark.svg"><img alt="$ £ € ¥ ₹ ₽ ₩ ৳ ฿ ⃁ ₿" src="glyph-images/currency.svg" height="15"></picture>
+    - misc but useful: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/misc-dark.svg"><img alt="⌂☸ ♩♪♫♬♭♮♯ ♀♂⚢⚣⚤⚥⚦⚧⚨⚩⚭⚮⚯⚲ ⌘ ␣ ☉ ♿ 円圓" src="glyph-images/misc.svg" height="17"></picture>
 
 1. All operators [parsed by Julia](https://github.com/JuliaLang/julia/blob/master/src/julia-parser.scm) (which is itself a good test of a technical font).
 
 1. [Unicode mathematical alphanumeric symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols):
 
-    <picture><source media="(prefers-color-scheme: dark)" srcset="images/alphanumerics-dark.svg"><img alt="𝐀𝐴𝑨 𝒜𝒲𝓐 𝔄 𝔸 𝕬 𝖠𝗔𝘈𝘼 𝙰" src="images/alphanumerics.svg" height="13"></picture>
+    <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/alphanumerics-dark.svg"><img alt="𝐀𝐴𝑨 𝒜𝒲𝓐 𝔄 𝔸 𝕬 𝖠𝗔𝘈𝘼 𝙰" src="glyph-images/alphanumerics.svg" height="13"></picture>
 
     The script capitals come in both roundhand (the default, `\mathscr`) and chancery (`\mathcal`) styles:
 
-    <picture><source media="(prefers-color-scheme: dark)" srcset="images/script-roundhand-dark.svg"><img alt="the script capitals A to Z, roundhand" src="images/script-roundhand.svg" height="17"></picture>
+    <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/script-roundhand-dark.svg"><img alt="the script capitals A to Z, roundhand" src="glyph-images/script-roundhand.svg" height="17"></picture>
 
-    <picture><source media="(prefers-color-scheme: dark)" srcset="images/script-chancery-dark.svg"><img alt="the script capitals A to Z, chancery" src="images/script-chancery.svg" height="18"></picture>
+    <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/script-chancery-dark.svg"><img alt="the script capitals A to Z, chancery" src="glyph-images/script-chancery.svg" height="18"></picture>
 
     The chancery forms are reached by Unicode's variation sequence (the capital followed by U+FE00) or by the `ss01` feature, which is what `unicode-math` uses: `\setmathfont{Lisnoti}[range=\mathcal, StylisticSet=1]`.
 
-1. Other standardised variation sequences of maths blocks, each shown here after its base: cups and caps with serifs, circled operators with a white rim, subsets with the stroke through both lower members, relations with a slanted equals, empty set and zero with a slash: <picture><source media="(prefers-color-scheme: dark)" srcset="images/variation-sequences-dark.svg"><img alt="∩ ∩︀ ∪ ∪︀ ⊓ ⊓︀ ⊔ ⊔︀ ⊕ ⊕︀ ⊗ ⊗︀ ⊜ ⊜︀ ⊊ ⊊︀ ⊋ ⊋︀ ≨ ≨︀ ⪬ ⪬︀ ∅ ∅︀ 0 0︀" src="images/variation-sequences.svg" height="17"></picture>
+1. Other standardised variation sequences of maths blocks, each shown here after its base: cups and caps with serifs, circled operators with a white rim, subsets with the stroke through both lower members, relations with a slanted equals, empty set and zero with a slash: <picture><source media="(prefers-color-scheme: dark)" srcset="glyph-images/variation-sequences-dark.svg"><img alt="∩ ∩︀ ∪ ∪︀ ⊓ ⊓︀ ⊔ ⊔︀ ⊕ ⊕︀ ⊗ ⊗︀ ⊜ ⊜︀ ⊊ ⊊︀ ⊋ ⊋︀ ≨ ≨︀ ⪬ ⪬︀ ∅ ∅︀ 0 0︀" src="glyph-images/variation-sequences.svg" height="17"></picture>
 
 > [!TIP]
 > If you want the above but with a monospaced font, then take a look at [Julia Mono](https://juliamono.netlify.app/).
