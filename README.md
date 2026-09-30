@@ -5,7 +5,8 @@
 > 
 > For an introduction to the fonts and a chance to try them out go to the [**lisnoti.com**](https://lisnoti.com/) website.
 
-<img src="images/lisnoti-card.svg" alt="Lisnoti font card" align="right" width="280">
+<img src="images/lisnoti-code-card.svg" alt="Lisnoti Code font card" style="width: 210;" align="right" >
+<img src="images/lisnoti-card.svg" alt="Lisnoti font card" style="width: 210;" align="right" >
 
 **Lisnoti** (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use
 but with particular consideration given to making it work consistently in maths, science and actuarial contexts. In addition, Lisnoti includes an OpenType `MATH` table, so it can be loaded by `unicode-math` in LuaLaTeX and used for equations in Microsoft Word.
@@ -13,6 +14,7 @@ but with particular consideration given to making it work consistently in maths,
 The initial driver for Lisnoti was the lack of a suitable *proportional* font for writing computer code. While I have used Lisnoti itself as a coding font for a number of years, coding-specific fonts can improve the experience by using ligatures. For this reason, a dedicated **Lisnoti Code** font also exists &ndash; see [below](#lisnoti-code).
 
 If you're interested in why Lisnoti exists, please see [this article](https://timgord.com/2024-01/lisnoti-a-proportional-font-that-works-for-coding-too/).
+
 
 Lisnoti fonts are available in regular, italic, bold and bold-italic variants in OpenType (`.ttf`) and web (`.woff2`) formats under the [SIL Open Font Licence (OFL)](https://openfontlicense.org/). The current releases are:
 
@@ -135,8 +137,12 @@ Each font family has its own folder (beginning `font-`), and within that folder,
 <td align="left" colspan="2">SIL Open Font Licence plus the notices of the Noto fonts from which the Lisnoti family is built. The licence covers all font families.</td>
 </tr>
 <tr>
+<td align="left"><code>images/</code></td>
+<td align="left" colspan="2">Lisnoti and Lisnoti Code font and social cards.</td>
+</tr>
+<tr>
 <td align="left"><code>glyph-images/</code></td>
-<td align="left" colspan="2">The images in this README.</td>
+<td align="left" colspan="2">The glyph images in this README.</td>
 </tr>
 </tbody>
 </table>

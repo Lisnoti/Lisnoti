@@ -1,8 +1,12 @@
 # Changelog for Lisnoti
 
+<img src="images/lisnoti-card.svg" alt="Lisnoti font card" align="right" width="210">
+
 > [!NOTE]
 > The glyphs in this changelog are shown in the *local display font*, which
 > means that *they may not look like the actual Lisnoti version*.
+
+
 
 ## [2.004] - 2026-09-29
 

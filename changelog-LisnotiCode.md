@@ -1,5 +1,7 @@
 # Changelog for Lisnoti Code
 
+<img src="images/lisnoti-code-card.svg" alt="Lisnoti Code font card" align="right" width="210">
+
 > [!NOTE]
 > The glyphs in this changelog are shown in the *local display font*, which
 > means that *they may not look like the actual Lisnoti Code version*.
