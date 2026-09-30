@@ -5,8 +5,8 @@
 > 
 > For an introduction to the fonts and a chance to try them out go to the [**lisnoti.com**](https://lisnoti.com/) website.
 
-<img src="images/lisnoti-code-card.svg" alt="Lisnoti Code font card" style="width: 210;" align="right" >
-<img src="images/lisnoti-card.svg" alt="Lisnoti font card" style="width: 210;" align="right" >
+<img src="images/lisnoti-code-card.svg" alt="Lisnoti Code font card" style="width: 210px;" align="right" >
+<img src="images/lisnoti-card.svg" alt="Lisnoti font card" style="width: 210px;" align="right" >
 
 **Lisnoti** (/lɪzˈnəʊtiː/) is a proportional sans serif font designed for general use
 but with particular consideration given to making it work consistently in maths, science and actuarial contexts. In addition, Lisnoti includes an OpenType `MATH` table, so it can be loaded by `unicode-math` in LuaLaTeX and used for equations in Microsoft Word.
