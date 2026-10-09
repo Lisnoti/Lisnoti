@@ -71,7 +71,7 @@ Either way, leave `lisnoti.css` in the folder with its font files.[^paths]
 
 ### 3. Website &ndash; fonts served by lisnoti.com
 
-You don't need to host the fonts locally if you don't want to &ndash; lisnoti.com can do this for you instead. An advantage of this approach is that you will have the latest release on your site.
+You don't need to host the fonts locally if you don't want to &ndash; lisnoti.com can do this for you instead. An advantage of this approach is that you will always have the latest release on your site.
 
 Simply point at the stylesheet on lisnoti.com instead, either from your web pages (which means they all require this link in their `<head>` section)
 
@@ -232,8 +232,8 @@ Please bear in mind that I am not a typography expert, just a frustrated user.
 
 [**Lisnoti Code**](https://lisnoti.com/code/) is Lisnoti with specific adjustments for writing code. It retains Lisnoti's character set and drawings, drops the `MATH` table, and adds the following features:
 
-- **Spaces that tell words from indentation.** A space between two words is narrow (Lisnoti's own width), and a space in a run, such as indentation or the gap before a comment, is wide (500&#xA0;units, an en space). Where contextual alternates are switched off, as in Safari (see below), every space has one width in between (380&#xA0;units).
-- **A hyphen drawn as a minus**, because in code it usually is one. Between two letters, digits or underscores, as in `max-width` or `n-1`, it is shorter.
+- **Wide spaces for indentation.** Lisnoti Code sets runs of spaces as extra wide (500&#xA0;units, an en space) to make indentation levels clear, but leaves single spaces at normal width for readability. Where contextual alternates are switched off, as in Safari (see below), every space has the same, still relatively wide, width (380&#xA0;units).
+- **A hyphen drawn as a minus**, because in code that's what it usually means. Between two letters, digits or underscores, as in `max-width` or `n-1`, it is shorter.
 - **Ligatures** for `==` `===` `!=` `!==`, `<=` `>=`, `->` `<-` `=>`, and F#/Julia/R pipes `|>` `<|` and their multi-bar forms. A ligature is used only when the whole run of operator characters matches it, so `<==` and `-->` stay as they are.
 - **Box drawing that lines up with the spaces**, so the output of `tree` and similar tools stays aligned.
 
@@ -253,7 +253,7 @@ Getting Lisnoti Code is similar to [getting Lisnoti](#get-lisnoti):
 
 ### Choosing Lisnoti Code features
 
-Whether *contextual alternates* and *standard ligatures* are on or off will depend on the application:
+Whether *contextual alternates* and *standard ligatures* are on or off  depends on the application:
 
 - **VS Code** turns both off unless told otherwise. In `settings.json` set `"editor.fontFamily": "Lisnoti Code"` and `"editor.fontLigatures": true`, or give a feature list instead of `true`, e.g. `"'liga' off, 'calt' on, 'ss05' on"` for the spacing and the arrows only.
 - **Word** also turns both off by default. In the Font dialog (Ctrl+D), *Advanced* tab: *Ligatures: Standard Only* turns on `liga`, the *Use Contextual Alternates* box turns on `calt`, and *Stylistic sets* picks one set.
