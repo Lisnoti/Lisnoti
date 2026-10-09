@@ -8,10 +8,17 @@
 
 ## [Unreleased]
 
+- Use square root `√` (U+221A) glyph pattern as the basis for
+    - `∛` (U+221B)
+    - `∜` (U+221C)
+    - `؆` (U+0606)
+    - `؇` (U+0607)
+    - check for other glyphs based on alpha
+
 - Use alpha `ɑ` (U+0251) glyph pattern as the basis for
     - `ᵅ` (U+1D45)
     - `ꭤ` (U+AB64)
-    - check for other glyphs based on alpha
+    - check for other glyphs based on alpha `ɑ` (U+0251)
 
 - Use common subset `⊂` (U+2282) glyph pattern as basis for
     - `⥹` (U+2979)
