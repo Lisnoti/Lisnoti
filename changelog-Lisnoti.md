@@ -6,7 +6,15 @@
 > The glyphs in this changelog are shown in the *local display font*, which
 > means that *they may not look like the actual Lisnoti version*.
 
+$$\phi=\varphi$$
+
 ## [Unreleased]
+
+- Consider creating a variable weight version of Lisnoti.
+
+- LaTeX typesetting of `f(t)` results in the top of the (italic) `f` hitting the top of the (non-italic) `(`.
+
+- Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
 
 - Use square root `√` (U+221A) glyph pattern as the basis for
     - `∛` (U+221B)
@@ -44,12 +52,12 @@
 
 ### Fixed
 
-- Equations on web pages using `lisnoti.css` (the version of the web font split into subsets) now get large operators and stretchy brackets. Previously `⋃ ⋂ ∐ ⋀ ⋁ ⨀ ⨁ ⨂ ⨄ ⨆ ⅀ ∬ ∭ ∮` stayed at text size in display equations, and `⟨ ⟩ ⌈ ⌉ ⌊ ⌋ ⟦ ⟧ ⟪ ⟫` did not stretch around a fraction. The fix adds these characters, the horizontal brackets `⎴ ⎵ ⏜ ⏝ ⏞ ⏟` and seven stretchy accents to the Latin subset, which is the file a browser takes stretching information from. The monolithic version (`lisnoti-monolithic.css`) was never affected.
-- Stray points left along straight edges when the bold faces were made have been removed. They could not be seen, but they could confuse software that looks for corners. The bold `>` and 68 other bold relations such as `≥ ≫ ⪈` were among those affected. The regular and italic faces had a few as well.
+- Equations on web pages using `lisnoti.css` (the version of the web font split into subsets) now get large operators and stretchy brackets. Previously `⋃ ⋂ ∐ ⋀ ⋁ ⨀ ⨁ ⨂ ⨄ ⨆ ⅀ ∬ ∭ ∮` stayed at text size in display equations, and `⟨ ⟩ ⌈ ⌉ ⌊ ⌋ ⟦ ⟧ ⟪ ⟫` did not stretch around a fraction. The fix adds these characters, the horizontal brackets `⎴ ⎵ ⏜ ⏝ ⏞ ⏟` and seven stretchy accents to the Latin subset, which is where browsers get the stretching information. The monolithic version (`lisnoti-monolithic.css`) was never affected.
+- Removed stray points left along straight edges when the bold faces were made. Although they were not visible to the naked eye, they confused software that looks for corners. The bold `>` and 68 other bold relations such as `≥ ≫ ⪈` were among those affected. The regular and italic faces had a few as well.
 
 ### Changed
 
-- The stylesheet for the monolithic web fonts is renamed `lisnoti-monolithic.css` (previously `lisnoti-full.css`) to match its folder, `Lisnoti-woff2-monolithic`. lisnoti.com serves it under both names, so existing links keep working.
+- The stylesheet for the monolithic web fonts has been renamed `lisnoti-monolithic.css` (previously `lisnoti-full.css`) to match its folder, `Lisnoti-woff2-monolithic`. lisnoti.com serves it under both names, so existing links keep working.
 
 ## [2.002] - 2026-09-25
 
@@ -73,7 +81,7 @@ Corrected the vertical alignment of `∞ ⧜ ⫙ ⟒` and the colon component of
 
 The proportional to symbol, `∝`, was redrawn (based on the Noto Sans Math symbol), partly to help distinguish it from the Greek alpha `α`.
 
-Although Lisnoti contained the full-width, half-width and East Asian characters `｛ ｝￩￪￫￬〒〰円圓`, they were not displayed by Microsoft Word because it categorises them all as East Asian and will only use fonts that declare they support this in the OS/2 field `ulCodePageRange`. The relevant bits have been turned on[^codepage] for Lisnoti&#xA0;2.001 and Word now displays them in Lisnoti. (Reversed in [2.004](#2004---2026-09-29), because the declaration also made Word space lines too widely.)
+Although Lisnoti contained the full-width, half-width and East Asian characters `｛ ｝￩￪￫￬〒〰円圓`, they were not displayed by Microsoft Word because it categorises them as East Asian and will only use fonts that declare they support this in the OS/2 field `ulCodePageRange`. The relevant bits have been turned on[^codepage] for Lisnoti&#xA0;2.001 and Word now displays them in Lisnoti. (Reversed in [2.004](#2004---2026-09-29), because the declaration also made Word space lines too widely.)
 
 [^codepage]: Technically the bits declare Korean support, which Lisnoti does not have. Word and other programs will still fall back to another font for any character Lisnoti lacks, so the only effect is that Word will now use Lisnoti for the characters it does have. (JuliaMono does the same.)
 
