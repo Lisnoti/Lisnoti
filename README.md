@@ -186,11 +186,11 @@ derives from Khaled Hosny's wholesale redesign of [Noto Sans Math](https://fonts
 
 ## Feedback
 
-Comments on Lisnoti Code are welcome on
-<a href="https://github.com/Lisnoti/Lisnoti/discussions">the GitHub discussions page</a>.
+Comments on Lisnoti and Lisnoti Code are welcome on
+[the GitHub discussions page](https://github.com/Lisnoti/Lisnoti/discussions).
 
-Please report bugs
-<a href="https://github.com/Lisnoti/Lisnoti/issues">here</a>.
+Please report bugs using
+[GitHub issues](https://github.com/Lisnoti/Lisnoti/issues).
 
 ## Lisnoti's key features
 
