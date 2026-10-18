@@ -91,7 +91,7 @@ See [lisnoti.com](https://lisnoti.com/index.html#using-lisnoti-for-websites) for
 
 ### 4. LaTeX
 
-For LaTeX users, Lisnoti is available on CTAN as the [lisnoti package](https://ctan.org/pkg/lisnoti):
+For LaTeX users, Lisnoti (but currently not Lisnoti Code) is available on CTAN as the [lisnoti package](https://ctan.org/pkg/lisnoti):
 
 - [*Pending addition to TeX Live*] In TeX Live, run `tlmgr install lisnoti`.
 - [*Pending addition to MiKTeX*] In MiKTeX, open MiKTeX Console, go to *Packages*, search for lisnoti, select it and click *+*. Or, at a command prompt, run `miktex packages install lisnoti`.
@@ -188,7 +188,7 @@ derives from Khaled Hosny's wholesale redesign of [Noto Sans Math](https://fonts
 
 If you have comments on Lisnoti, please use [the GitHub repo discussions page](https://github.com/Lisnoti/Lisnoti/discussions).
 
-Please bear in mind that I am not a typography expert, just a frustrated user.
+If you find a bug in Lisnoti, please report it using [the GitHub repo issues page](https://github.com/Lisnoti/Lisnoti/issues).
 
 ## Lisnoti's key features
 
