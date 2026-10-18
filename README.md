@@ -27,7 +27,7 @@ What has changed in each release is in [changelog-Lisnoti.md](changelog-Lisnoti.
 
 ## Get Lisnoti
 
-There are three ways to use Lisnoti.
+There are four ways to use Lisnoti.
 
 ### 1. Install it
 
@@ -88,6 +88,35 @@ or from the top of your own stylesheet (which is what lisnoti.com itself does)
 The above links deliver the font by subset (which is usually the optimal approach for web pages). If instead you want the monolithic version use `https://lisnoti.com/lisnoti-monolithic.css`.
 
 See [lisnoti.com](https://lisnoti.com/index.html#using-lisnoti-for-websites) for more details.
+
+### 4. LaTeX
+
+For LaTeX users, Lisnoti is available on CTAN as the [lisnoti package](https://ctan.org/pkg/lisnoti):
+
+- [*Pending addition to TeX Live*] In TeX Live, run `tlmgr install lisnoti`.
+- [*Pending addition to MiKTeX*] In MiKTeX, open MiKTeX Console, go to *Packages*, search for lisnoti, select it and click *+*. Or, at a command prompt, run `miktex packages install lisnoti`.
+
+> In the period before the package is added to TeX Live and MiKTeX, you can still simply install the fonts as in [1 above](#1-install-it) and the commands below will find them.
+
+Note that using Lisnoti in LaTeX requires LuaLaTeX or XeLaTeX.
+
+Commands:
+
+```latex
+\usepackage{unicode-math}
+\setmainfont{Lisnoti}
+\setsansfont{Lisnoti}
+\setmathfont{Lisnoti}
+\setmathfont{Lisnoti Bold}[version=bold]
+\setmathfont{Lisnoti}[range=\mathcal, StylisticSet=1]
+```
+Notes:
+- If you use `amsmath`, load it *before* the above.
+- The `[version=bold]` line makes `\boldmath` and `\mathversion{bold}` work.
+- The `[range=\mathcal, StylisticSet=1]` line ensures standard behaviour for `\mathcal`, i.e. calligraphic capitals.
+- The order of the above lines matters &ndash; the `\mathcal, StylisticSet` line *must* follow the bold version line.
+
+See [lisnoti.pdf](https://mirrors.ctan.org/fonts/lisnoti/lisnoti.pdf) for a specimen and more detail.
 
 ## Guide to this repo
 
