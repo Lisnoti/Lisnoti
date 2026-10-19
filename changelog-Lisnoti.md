@@ -6,13 +6,15 @@
 > The glyphs in this changelog are shown in the *local display font*, which
 > means that *they may not look like the actual Lisnoti version*.
 
-$$\phi=\varphi$$
-
 ## [Unreleased]
 
 - Consider creating a variable weight version of Lisnoti.
 
-- LaTeX typesetting of `f(t)` results in the top of the (italic) `f` hitting the top of the (non-italic) `(`.
+- Consider adding conventional text ligatures to Lisnoti and possibly also Lisnoti Code:
+    - Strong case for: ff, ft, tt, fft
+    - Weak case for: fi, fl, ffi, ffl
+    - A pro is space-saving (which helps in a coding context too).
+    - NB Lisnoti already has an inherited italic *ff* ligature, plus some others (in all styles) that simply reprint as is.
 
 - Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
 
