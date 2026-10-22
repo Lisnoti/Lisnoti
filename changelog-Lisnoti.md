@@ -38,6 +38,8 @@
     - `ꭤ` (U+AB64)
     - check for other glyphs based on alpha `ɑ` (U+0251)
 
+- Give `⫍` (U+2ACD) and `⫎` (U+2ACE) a height consistent with `⊏` and `⊐` etc.
+
 - Use common subset `⊂` (U+2282) glyph pattern as basis for
     - `⥹` (U+2979)
     - `⥺` (U+297A)
