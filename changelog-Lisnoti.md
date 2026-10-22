@@ -8,15 +8,23 @@
 
 ## [Unreleased]
 
-- Consider creating a variable weight version of Lisnoti.
+- Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not for Noto Sans Math.)
 
-- Consider adding conventional text ligatures to Lisnoti and possibly also Lisnoti Code:
-    - Strong case for: ff, ft, tt, fft
-    - Weak case for: fi, fl, ffi, ffl
-    - A pro is space-saving (which helps in a coding context too).
-    - NB Lisnoti already has an inherited italic *ff* ligature, plus some others (in all styles) that simply reprint as is.
+- Consider reducing space to the right of lowercase `l` by ~3% of total width.
+
+- Consider making `α` even more distinct from italic `a`.
+
+- Consider giving italic `i` a tail.
+
+- Consider adding conventional text ligatures to Lisnoti and possibly also Lisnoti Code.
+    - Note that Lisnoti already has an inherited italic *ff* ligature, plus some other ligatures in all styles that simply reprint as they are.
+    - These are not just aesthetics -- they can also be used to save space (which helps in a coding context too).
+    - Moderate case for: ff, ft, tt, fft. (If you don't do these then delete the italic *ff* ligature.)
+    - Weak case for: fi, fl, ffi, ffl.
 
 - Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
+
+- `⨋` is too tall for one line -- shorten it.
 
 - Use square root `√` (U+221A) glyph pattern as the basis for
     - `∛` (U+221B)
