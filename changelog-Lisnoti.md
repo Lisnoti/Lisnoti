@@ -16,19 +16,19 @@
 
 - Consider redrawing 'α' completely
     - It's still not sufficiently distinctive vs italic '*a*'.
-    - I think it  was copied from Noto Sans JP, and it's slightly mismatched in style vs other lower case Greek letters.
     - What matters is that the letter looks like it was drawn in a single stroke. Segoe UI is the best sans alpha I can find (although Calibri and PT Sans are also ok).
+    - I think we need to draw it from scratch.
 
 - Consider giving italic 'i' a tail ('*i*' vs 'i' akin to '*f*' vs 'f')
 
-- Consider adding conventional text ligatures (or an equivalent).
-    - Note that Lisnoti already has an inherited italic '*ff*' ligature, plus some other ligatures in all styles that simply reprint as they are.
-    - I'm unconvinced on the aesthetic justification -- a lot of the time I think these flourishes are affectation.
+- Consider conventional text ligatures (or an equivalent).
+    - Lisnoti already has an inherited italic '*ff*' ligature, plus some other ligatures in all styles that *I think* reprint as they are.
+    - I'm unconvinced on the justification of standard text ligatures for Lisnoti -- there are no serious collisions and many conventional ligatures look affected to my eye.
     - They could save a little bit of space, but (a) I think the gain marginal and (b) not all sans serif fonts with these ligatures do make the ligatures narrower.
-    - Moderate case for: 'ff', 'ft', 'tt', 'tf' because the crosses end up very close. (If you don't do these then delete the italic '*ff*' ligature.)
+    - Moderate case for: 'ff', 'ft', 'tt', 'tf' because the crosses end up very close to each other. (If you don't do these then delete the italic '*ff*' ligature.)
     - Weak case for: 'fi', 'fl', 'ffi', 'ffl'.
         - If you do 'fl' then I think you should do all of 'f' followed by 'bhijkl', but only Calibri actually does this.
-        - If you do 'fi' then you should probably also do 'fj' although it's pretty unlikely to occur in practice.
+        - If you do 'fi' then you should probably also do 'fj' (although it's pretty unlikely to occur in practice).
     - I find the dot on the 'i' helps me read 'fi'. 'Fee fi fo fum.' If anything, pull back the curl on the top of the 'f' in 'fi' to make the 'i' clearer.
     - Consider glyph substitution retaining the same width and with only subtle changes:
         - Substitute the standard 'f' glyph for one with a *curtailed top* when it is followed by a glyph it gets too close to, i.e. 'b', 'h', 'i', 'j', 'k', 'l'. This affects 'fb', 'fh', 'fi', 'fj', 'fk', 'fl'.
