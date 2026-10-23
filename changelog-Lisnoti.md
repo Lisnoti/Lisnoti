@@ -8,19 +8,31 @@
 
 ## [Unreleased]
 
-- Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not for Noto Sans Math.)
+- Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not of Noto Sans Math.)
 
-- Consider reducing space to the right of lowercase `l` by ~3% of total width.
+- Consider adding no ligature versions (*Lisnoti NL* and *Lisnoti Code NL*) because not all editors allow users to switch ligatures off. (Don't need woff2 versions of these.)
 
-- Consider making `α` even more distinct from italic `a`.
+- Consider reducing space to the right of lowercase 'l' by ~3% of total width so that it sits closer to typical glyphs. Think about kerning for 'l' followed by 'bhkmnprxlz'. ('lx' and 'lz' have smaller gaps than the other pairs?)
 
-- Consider giving italic `i` a tail.
+- Consider redrawing 'α' completely
+    - It's still not sufficiently distinctive vs italic '*a*'.
+    - I think it  was copied from Noto Sans JP, and it's slightly mismatched in style vs other lower case Greek letters.
+    - What matters is that the letter looks like it was drawn in a single stroke. Segoe UI is the best sans alpha I can find (although Calibri and PT Sans are also ok).
 
-- Consider adding conventional text ligatures to Lisnoti and possibly also Lisnoti Code.
-    - Note that Lisnoti already has an inherited italic *ff* ligature, plus some other ligatures in all styles that simply reprint as they are.
-    - These are not just aesthetics -- they can also be used to save space (which helps in a coding context too).
-    - Moderate case for: ff, ft, tt, fft. (If you don't do these then delete the italic *ff* ligature.)
-    - Weak case for: fi, fl, ffi, ffl.
+- Consider giving italic 'i' a tail ('*i*' vs 'i' akin to '*f*' vs 'f')
+
+- Consider adding conventional text ligatures (or an equivalent).
+    - Note that Lisnoti already has an inherited italic '*ff*' ligature, plus some other ligatures in all styles that simply reprint as they are.
+    - I'm unconvinced on the aesthetic justification -- a lot of the time I think these flourishes are affectation.
+    - They could save a little bit of space, but (a) I think the gain marginal and (b) not all sans serif fonts with these ligatures do make the ligatures narrower.
+    - Moderate case for: 'ff', 'ft', 'tt', 'tf' because the crosses end up very close. (If you don't do these then delete the italic '*ff*' ligature.)
+    - Weak case for: 'fi', 'fl', 'ffi', 'ffl'.
+        - If you do 'fl' then I think you should do all of 'f' followed by 'bhijkl', but only Calibri actually does this.
+        - If you do 'fi' then you should probably also do 'fj' although it's pretty unlikely to occur in practice.
+    - I find the dot on the 'i' helps me read 'fi'. 'Fee fi fo fum.' If anything, pull back the curl on the top of the 'f' in 'fi' to make the 'i' clearer.
+    - Consider glyph substitution retaining the same width and with only subtle changes:
+        - Substitute the standard 'f' glyph for one with a *curtailed top* when it is followed by a glyph it gets too close to, i.e. 'b', 'h', 'i', 'j', 'k', 'l'. This affects 'fb', 'fh', 'fi', 'fj', 'fk', 'fl'.
+        - Substitute the standard glyphs with crosses, i.e. 'f' and 't', for ones with a *curtailed right cross* when followed by a glyph with a cross. This affects 'ff', 'ft', 'tf', 'tt'.
 
 - Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
 
