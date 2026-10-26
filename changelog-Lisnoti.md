@@ -8,18 +8,58 @@
 
 ## [Unreleased]
 
-- Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not of Noto Sans Math.)
+- [*Long term -- not an immediate priority*] Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not of Noto Sans Math.)
 
 - Consider adding no ligature versions (*Lisnoti NL* and *Lisnoti Code NL*) because not all editors allow users to switch ligatures off. (Don't need woff2 versions of these.)
 
-- Consider reducing space to the right of lowercase 'l' by ~3% of total width so that it sits closer to typical glyphs. Think about kerning for 'l' followed by 'bhkmnprxlz'. ('lx' and 'lz' have smaller gaps than the other pairs?)
+- [*Unlikely*] Consider giving italic 'i' a tail ('*i*' vs 'i' akin to '*f*' vs 'f')
 
 - Consider redrawing 'α' completely
     - It's still not sufficiently distinctive vs italic '*a*'.
     - What matters is that the letter looks like it was drawn in a single stroke. Segoe UI is the best sans alpha I can find (although Calibri and PT Sans are also ok).
     - I think we need to draw it from scratch.
 
-- Consider giving italic 'i' a tail ('*i*' vs 'i' akin to '*f*' vs 'f')
+- Use alpha `ɑ` (U+0251) glyph pattern as the basis for
+    - `ᵅ` (U+1D45)
+    - `ꭤ` (U+AB64)
+    - check for other glyphs based on alpha `ɑ` (U+0251)
+
+- Consider reducing space to the right of lowercase 'l' by ~3% of total width so that it sits closer to typical glyphs. Think about kerning for 'l' followed by 'bhkmnprxlz'. ('lx' and 'lz' have smaller gaps than the other pairs?)
+
+- Ensure math alphabets use glyphs consistent with text for `l` and `ɑ`
+    - `l`:
+        - U+1D425 &#x1D425;
+        - U+1D459 &#x1D459;
+        - U+1D48D &#x1D48D;
+        - U+1D55D &#x1D55D; (double-struck -- requires a redraw)
+        - U+1D5F9 &#x1D5F9;
+        - U+1D62D &#x1D62D;
+        - U+1D661 &#x1D661;
+    - `ɑ`:
+        - U+1D6C2 &#x1D6C2;
+        - U+1D6FC &#x1D6FC;
+        - U+1D736 &#x1D736;
+        - U+1D770 &#x1D770;
+        - U+1D7AA &#x1D7AA;
+
+- Give `⫍` (U+2ACD) and `⫎` (U+2ACE) a height consistent with `⊏` and `⊐` etc.
+
+- Use common subset `⊂` (U+2282) glyph pattern as basis for
+    - `⥹` (U+2979)
+    - `⥺` (U+297A)
+    - `⥻` (U+297B)
+    - `⭄` (U+2B44)
+
+- Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
+
+- `⨋` is too tall for one line -- shorten it.
+
+- Use square root `√` (U+221A) glyph pattern as the basis for
+    - `∛` (U+221B)
+    - `∜` (U+221C)
+    - `؆` (U+0606)
+    - `؇` (U+0607)
+    - check for other glyphs based on alpha
 
 - Consider conventional text ligatures (or an equivalent).
     - Lisnoti already has an inherited italic '*ff*' ligature, plus some other ligatures in all styles that *I think* reprint as they are.
@@ -34,29 +74,7 @@
         - Substitute the standard 'f' glyph for one with a *curtailed top* when it is followed by a glyph it gets too close to, i.e. 'b', 'h', 'i', 'j', 'k', 'l'. This affects 'fb', 'fh', 'fi', 'fj', 'fk', 'fl'.
         - Substitute the standard glyphs with crosses, i.e. 'f' and 't', for ones with a *curtailed right cross* when followed by a glyph with a cross. This affects 'ff', 'ft', 'tf', 'tt'.
 
-- Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
-
-- `⨋` is too tall for one line -- shorten it.
-
-- Use square root `√` (U+221A) glyph pattern as the basis for
-    - `∛` (U+221B)
-    - `∜` (U+221C)
-    - `؆` (U+0606)
-    - `؇` (U+0607)
-    - check for other glyphs based on alpha
-
-- Use alpha `ɑ` (U+0251) glyph pattern as the basis for
-    - `ᵅ` (U+1D45)
-    - `ꭤ` (U+AB64)
-    - check for other glyphs based on alpha `ɑ` (U+0251)
-
-- Give `⫍` (U+2ACD) and `⫎` (U+2ACE) a height consistent with `⊏` and `⊐` etc.
-
-- Use common subset `⊂` (U+2282) glyph pattern as basis for
-    - `⥹` (U+2979)
-    - `⥺` (U+297A)
-    - `⥻` (U+297B)
-    - `⭄` (U+2B44)
+- Provide script style sets for optically correct sub/super scripts and prime in LaTeX.
 
 ## [2.004] - 2026-09-29
 
