@@ -8,64 +8,14 @@
 
 ## [Unreleased]
 
+- Consider adding no ligature version of Lisnoti Code (*Lisnoti Code NL*) because not all editors allow users to switch ligatures off. (Don't need woff2 version.)
+
 - [*Long term -- not an immediate priority*] Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not of Noto Sans Math.)
 
-- Consider adding no ligature versions (*Lisnoti NL* and *Lisnoti Code NL*) because not all editors allow users to switch ligatures off. (Don't need woff2 versions of these.)
-
-- [*Unlikely*] Consider giving italic 'i' a tail ('*i*' vs 'i' akin to '*f*' vs 'f')
-
-- Consider redrawing 'α' completely
-    - It's still not sufficiently distinctive vs italic '*a*'.
-    - What matters is that the letter looks like it was drawn in a single stroke. Segoe UI is the best sans alpha I can find (although Calibri and PT Sans are also ok).
-    - I think we need to draw it from scratch.
-
-- Use alpha `ɑ` (U+0251) glyph pattern as the basis for
-    - `ᵅ` (U+1D45)
-    - `ꭤ` (U+AB64)
-    - check for other glyphs based on alpha `ɑ` (U+0251)
-
-- Consider reducing space to the right of lowercase 'l' by ~3% of total width so that it sits closer to typical glyphs. Think about kerning for 'l' followed by 'bhkmnprxlz'. ('lx' and 'lz' have smaller gaps than the other pairs?)
-
-- Ensure math alphabets use glyphs consistent with text for `l` and `ɑ`
-    - `l`:
-        - U+1D425 &#x1D425;
-        - U+1D459 &#x1D459;
-        - U+1D48D &#x1D48D;
-        - U+1D55D &#x1D55D; (double-struck -- requires a redraw)
-        - U+1D5F9 &#x1D5F9;
-        - U+1D62D &#x1D62D;
-        - U+1D661 &#x1D661;
-    - `ɑ`:
-        - U+1D6C2 &#x1D6C2;
-        - U+1D6FC &#x1D6FC;
-        - U+1D736 &#x1D736;
-        - U+1D770 &#x1D770;
-        - U+1D7AA &#x1D7AA;
-
-- Give `⫍` (U+2ACD) and `⫎` (U+2ACE) a height consistent with `⊏` and `⊐` etc.
-
-- Use common subset `⊂` (U+2282) glyph pattern as basis for
-    - `⥹` (U+2979)
-    - `⥺` (U+297A)
-    - `⥻` (U+297B)
-    - `⭄` (U+2B44)
-
-- Consider making the Saudi Riyal Sign `⃁` (U+20C1)  narrower to be more consistent with other currency font signs.
-
-- `⨋` is too tall for one line -- shorten it.
-
-- Use square root `√` (U+221A) glyph pattern as the basis for
-    - `∛` (U+221B)
-    - `∜` (U+221C)
-    - `؆` (U+0606)
-    - `؇` (U+0607)
-    - check for other glyphs based on alpha
-
-- Consider conventional text ligatures (or an equivalent).
-    - Lisnoti already has an inherited italic '*ff*' ligature, plus some other ligatures in all styles that *I think* reprint as they are.
+- [*Deferred*] Consider conventional text ligatures (or an equivalent).
     - I'm unconvinced on the justification of standard text ligatures for Lisnoti -- there are no serious collisions and many conventional ligatures look affected to my eye.
     - They could save a little bit of space, but (a) I think the gain marginal and (b) not all sans serif fonts with these ligatures do make the ligatures narrower.
-    - Moderate case for: 'ff', 'ft', 'tt', 'tf' because the crosses end up very close to each other. (If you don't do these then delete the italic '*ff*' ligature.)
+    - Moderate case for: 'ff', 'ft', 'tt', 'tf' because the crosses end up very close to each other.
     - Weak case for: 'fi', 'fl', 'ffi', 'ffl'.
         - If you do 'fl' then I think you should do all of 'f' followed by 'bhijkl', but only Calibri actually does this.
         - If you do 'fi' then you should probably also do 'fj' (although it's pretty unlikely to occur in practice).
@@ -74,56 +24,119 @@
         - Substitute the standard 'f' glyph for one with a *curtailed top* when it is followed by a glyph it gets too close to, i.e. 'b', 'h', 'i', 'j', 'k', 'l'. This affects 'fb', 'fh', 'fi', 'fj', 'fk', 'fl'.
         - Substitute the standard glyphs with crosses, i.e. 'f' and 't', for ones with a *curtailed right cross* when followed by a glyph with a cross. This affects 'ff', 'ft', 'tf', 'tt'.
 
-- Provide script style sets for optically correct sub/super scripts and prime in LaTeX.
+
+## [2.005] - 2026-10-31
+
+### Changed
+
+- Greek small letter alpha '*α*' (U+03B1) has been completely redrawn to make it look like a traditional single stroke drawn alpha and ensure it is distinct compared with italic Latin small letter A '*a*' and Latin small letter alpha 'ɑ' (U+0251).
+
+- Space to the right of lowercase 'l' (U+006C) has been reduced so that it sits closer to typical glyphs. Kerning has been added for characters whose diagonals or low strokes meet the foot of 'l', such as 'x z A X Z /'.
+
+- Math alphabets now use the normal text glyphs 'l' and 'α':
+    - 'l':
+        - '&#x1D425;' (U+1D425) bold
+        - '&#x1D459;' (U+1D459) italic
+        - '&#x1D48D;' (U+1D48D) bold italic
+        - '&#x1D5F9;' (U+1D5F9) sans serif bold
+        - '&#x1D62D;' (U+1D62D) sans serif italic
+        - '&#x1D661;' (U+1D661) sans serif bold italic
+    - 'α':
+        - '&#x1D6C2;' (U+1D6C2) bold
+        - '&#x1D6FC;' (U+1D6FC) italic
+        - '&#x1D736;' (U+1D736) bold italic
+        - '&#x1D770;' (U+1D770) sans serif bold
+        - (There is no mathematical sans serif italic in Unicode)
+        - '&#x1D7AA;' (U+1D7AA) sans serif bold italic
+
+- Double-struck versions of 'l' and 'I' have both been redrawn to be distinguishable:
+    - Double-struck small *ell* '𝕝' (U+1D55D) -- added a tail using the base of '𝕛' as an exemplar
+    - Double-struck capital *eye* '𝕀' (U+1D540) -- added small serifs
+
+- The italic '*ﬀ*', '*ﬃ*' and '*ﬄ*' ligatures inherited from Noto Sans have been removed / redrawn to be the same as the individual glyphs without change, which is now consistent with other styles and other similar candidates for traditional ligatures. Updated legacy ligature characters involving 'l' to be the same as the drawn version.
+
+- Saudi Riyal Sign '⃁' (U+20C1) has been redrawn to be more consistent with other currency signs, with sharp corners, straight edges and consistent spacing between parallel lines (which matters in particular for the bold weight).
+
+- '⫍' (U+2ACD) and '⫎' (U+2ACE) have been redrawn to have a height consistent with '⊏' and '⊐' etc.
+
+- The '⊂' (U+2282) family glyph pattern has been used to redraw the following (which had been omitted from the general redraw in previous versions):
+    - '⥹' (U+2979)
+    - '⥺' (U+297A)
+    - '⥻' (U+297B)
+    - '⭄' (U+2B44)
+
+- '⨋' (U+2A0B) has been shortened to have the same height as integral signs.
+
+- The following specific radicals have been redrawn to be consistent with the Lisnoti square root '√' (U+221A):
+    - '∛' (U+221B)
+    - '∜' (U+221C)
+    - '؆' (U+0606)
+    - '؇' (U+0607)
+
+### Added
+
+- Script style sets have been added for optically correct sub/super scripts and prime in LaTeX (the OpenType `ssty` feature, which `unicode-math` uses automatically). Sub/super scripts are now a little heavier and wider than a plain reduction of the text glyphs, so they are easier to read, and the prime in e.g. '*f*′' is now the same size as the text prime and sits just above the top of the '*f*'. (Requested in [issue #6](https://github.com/Lisnoti/Lisnoti/issues/6).)
+
+### Fixed
+
+- In bold maths (`\boldmath`), the accent over '𝑖', '𝑙' and '𝐼' sat left of the stem. It now sits the same as in Regular.
+
+- Accents over a plain 'l' or 'ι' in equations were centred on the letter's whole width, so the foot or tail pushed them off the stem. They now sit over the stem.
+
+- Accents on the f-ligatures now follow the letters.
+
 
 ## [2.004] - 2026-09-29
 
 ### Changed
 
-- The brackets `( ) [ ] { }` are now taken from Noto Sans Math, which increases their height to just above the ascenders of `b d f h k l` (instead of stopping at the height of the capitals). The drawings are Noto Sans Math's and now match other brackets in the font, e.g. `⟨ ⌈ ⌊ ⟦`. This also updates `⸨ ⸩ ⹕ ⹖ ⹗ ⹘` because these are built from `( ) [ ]`.
-- The vertical line `|` now uses Noto Sans Math's narrower width.
-- Lisnoti 2.001 to 2.003 declared East Asian support so that Microsoft Word would show the few full-width, half-width and East Asian characters in Lisnoti (`｛｝￩￪￫￬〒〰円圓`). But this caused line spacing and other issues in Word, and so has been reverted, which means Word will display those characters in another font. Most applications, including VS Code, Visual Studio and browsers, are unaffected and will still show these characters in Lisnoti.
+- The brackets '( ) [ ] { }' are now taken from Noto Sans Math, which increases their height to just above the ascenders of 'b d f h k l' (instead of stopping at the height of the capitals). The drawings are Noto Sans Math's and now match other brackets in the font, e.g. '⟨ ⌈ ⌊ ⟦'. This also updates '⸨ ⸩ ⹕ ⹖ ⹗ ⹘' because these are built from '( ) [ ]'.
+- The vertical line '|' now uses Noto Sans Math's narrower width.
+- Lisnoti 2.001 to 2.003 declared East Asian support so that Microsoft Word would show the few full-width, half-width and East Asian characters in Lisnoti ('｛｝￩￪￫￬〒〰円圓'). But this caused line spacing and other issues in Word, and so has been reverted, which means Word will display those characters in another font. Most applications, including VS Code, Visual Studio and browsers, are unaffected and will still show these characters in Lisnoti.
 
 ### Fixed
 
 - In Microsoft Word, line spacing is now correct and a separate '@Lisnoti' font is no longer listed in font menus. (See above change note in relation to East Asian support.)
-- Equations rendered on web pages now show subscripts at one consistent height. Previously letters with descenders had lower subscripts, e.g. the `0` in `μ₀` sat below the one in `ε₀`. In LuaLaTeX, subscripts on single letters are unchanged, and a subscript on a tall bracketed expression such as `(a/b)₀` now sits a little higher, beside the bracket rather than below it.
-- Every closing bracket is now the mirror image of its opening bracket, including the larger sizes used in equations. Previously `⁅ ⁆`, `⸨ ⸩`, `⹕ ⹖` and `⹗ ⹘`, the large sizes of `{ }`, and in bold `⸦ ⸧` and the pieces of very large round brackets, differed slightly between left and right.
+- Equations rendered on web pages now show subscripts at one consistent height. Previously letters with descenders had lower subscripts, e.g. the '0' in 'μ₀' sat below the one in 'ε₀'. In LuaLaTeX, subscripts on single letters are unchanged, and a subscript on a tall bracketed expression such as '(a/b)₀' now sits a little higher, beside the bracket rather than below it.
+- Every closing bracket is now the mirror image of its opening bracket, including the larger sizes used in equations. Previously '⁅ ⁆', '⸨ ⸩', '⹕ ⹖' and '⹗ ⹘', the large sizes of '{ }', and in bold '⸦ ⸧' and the pieces of very large round brackets, differed slightly between left and right.
+
 
 ## [2.003] - 2026-09-25
 
 ### Fixed
 
-- Equations on web pages using `lisnoti.css` (the version of the web font split into subsets) now get large operators and stretchy brackets. Previously `⋃ ⋂ ∐ ⋀ ⋁ ⨀ ⨁ ⨂ ⨄ ⨆ ⅀ ∬ ∭ ∮` stayed at text size in display equations, and `⟨ ⟩ ⌈ ⌉ ⌊ ⌋ ⟦ ⟧ ⟪ ⟫` did not stretch around a fraction. The fix adds these characters, the horizontal brackets `⎴ ⎵ ⏜ ⏝ ⏞ ⏟` and seven stretchy accents to the Latin subset, which is where browsers get the stretching information. The monolithic version (`lisnoti-monolithic.css`) was never affected.
-- Removed stray points left along straight edges when the bold faces were made. Although they were not visible to the naked eye, they confused software that looks for corners. The bold `>` and 68 other bold relations such as `≥ ≫ ⪈` were among those affected. The regular and italic faces had a few as well.
+- Equations on web pages using `lisnoti.css` (the version of the web font split into subsets) now get large operators and stretchy brackets. Previously '⋃ ⋂ ∐ ⋀ ⋁ ⨀ ⨁ ⨂ ⨄ ⨆ ⅀ ∬ ∭ ∮' stayed at text size in display equations, and '⟨ ⟩ ⌈ ⌉ ⌊ ⌋ ⟦ ⟧ ⟪ ⟫' did not stretch around a fraction. The fix adds these characters, the horizontal brackets '⎴ ⎵ ⏜ ⏝ ⏞ ⏟' and seven stretchy accents to the Latin subset, which is where browsers get the stretching information. The monolithic version (`lisnoti-monolithic.css`) was never affected.
+- Removed stray points left along straight edges when the bold faces were made. Although they were not visible to the naked eye, they confused software that looks for corners. The bold '>' and 68 other bold relations such as '≥ ≫ ⪈' were among those affected. The regular and italic faces had a few as well.
 
 ### Changed
 
-- The stylesheet for the monolithic web fonts has been renamed `lisnoti-monolithic.css` (previously `lisnoti-full.css`) to match its folder, `Lisnoti-woff2-monolithic`. lisnoti.com serves it under both names, so existing links keep working.
+- The stylesheet for the monolithic web fonts has been renamed `lisnoti-monolithic.css` (previously `lisnoti-full.css`) to match its folder, `Lisnoti-woff2-monolithic`. [lisnoti.com](https://lisnoti.com/) serves it under both names, so existing links keep working.
+
 
 ## [2.002] - 2026-09-25
 
 ### Changed
 
-- The subset sign `⊂` and its relatives (41 glyphs, including `⊃ ⊆ ⊇ ⊄ ⊊ ⋐ ⟃ ⪽ ⪿ ⫅ ⫋ ⫏ ⫓`) have been redrawn as straight arms joined by a semicircle. Previously the arms started to curve well before the end, because the shape was a squashed version of a rounder one.
-    - `⟈ ⟉` were larger than `⊂` and now match it.
-    - In bold, the two cups of `⋐ ⋑` keep the same space between them as in regular.
-    - The dot in `⪽ ⪾` and the ring in `⟃ ⟄` are no longer squashed.
-- In bold and bold italic, the 23 miscellaneous symbols `⌂ ☸ ♀ ♂ ♩ ♪ ♫ ♬ ♭ ♮ ♯ ⚢ ⚣ ⚤ ⚥ ⚦ ⚧ ⚨ ⚩ ⚭ ⚮ ⚯ ⚲` now come from Noto Sans Symbols Bold instead of being thickened artificially from the regular. They match the weight of bold text better and keep their parts distinct. (The Noto `⚢` glyph was faulty and had to be repaired.)
+- The subset sign '⊂' and its relatives (41 glyphs, including '⊃ ⊆ ⊇ ⊄ ⊊ ⋐ ⟃ ⪽ ⪿ ⫅ ⫋ ⫏ ⫓') have been redrawn as straight arms joined by a semicircle. Previously the arms started to curve well before the end, because the shape was a squashed version of a rounder one.
+    - '⟈ ⟉' were larger than '⊂' and now match it.
+    - In bold, the two cups of '⋐ ⋑' keep the same space between them as in regular.
+    - The dot in '⪽ ⪾' and the ring in '⟃ ⟄' are no longer squashed.
+- In bold and bold italic, the 23 miscellaneous symbols '⌂ ☸ ♀ ♂ ♩ ♪ ♫ ♬ ♭ ♮ ♯ ⚢ ⚣ ⚤ ⚥ ⚦ ⚧ ⚨ ⚩ ⚭ ⚮ ⚯ ⚲' now come from Noto Sans Symbols Bold instead of being thickened artificially from the regular. They match the weight of bold text better and keep their parts distinct. (The Noto '⚢' glyph was faulty and had to be repaired.)
 
 ### Fixed
 
 Windows listed the bold italic style as 'Bold Bold Italic' (for example in Notepad). It is now 'Bold Italic'.
 
+
 ## [2.001] - 2026-09-24
 
 ### Fixed
 
-Corrected the vertical alignment of `∞ ⧜ ⫙ ⟒` and the colon component of the `≔ ≕ ⩴` glyphs to match the maths axis (same as `=`).
+Corrected the vertical alignment of '∞ ⧜ ⫙ ⟒' and the colon component of the '≔ ≕ ⩴' glyphs to match the maths axis (same as '=').
 
-The proportional to symbol, `∝`, was redrawn (based on the Noto Sans Math symbol), partly to help distinguish it from the Greek alpha `α`.
+The proportional to symbol, '∝', was redrawn (based on the Noto Sans Math symbol), partly to help distinguish it from the Greek alpha 'α'.
 
-Although Lisnoti contained the full-width, half-width and East Asian characters `｛ ｝￩￪￫￬〒〰円圓`, they were not displayed by Microsoft Word because it categorises them as East Asian and will only use fonts that declare they support this in the OS/2 field `ulCodePageRange`. The relevant bits have been turned on[^codepage] for Lisnoti&#xA0;2.001 and Word now displays them in Lisnoti. (Reversed in [2.004](#2004---2026-09-29), because the declaration also made Word space lines too widely.)
+Although Lisnoti contained the full-width, half-width and East Asian characters '｛ ｝￩￪￫￬〒〰円圓', they were not displayed by Microsoft Word because it categorises them as East Asian and will only use fonts that declare they support this in the OS/2 field `ulCodePageRange`. The relevant bits have been turned on[^codepage] for Lisnoti&#xA0;2.001 and Word now displays them in Lisnoti. (Reversed in [2.004](#2004---2026-09-29), because the declaration also made Word space lines too widely.)
 
 [^codepage]: Technically the bits declare Korean support, which Lisnoti does not have. Word and other programs will still fall back to another font for any character Lisnoti lacks, so the only effect is that Word will now use Lisnoti for the characters it does have. (JuliaMono does the same.)
 
@@ -133,6 +146,7 @@ Although Lisnoti contained the full-width, half-width and East Asian characters 
 > ```
 > reg delete "HKCU\Software\Microsoft\Office\16.0\Common\MathFonts" /v Lisnoti /f
 > ```
+
 
 ## [2.000] - 2026-09-21
 
@@ -148,17 +162,17 @@ Lisnoti&#xA0;2.000 is a complete rebuild of the font:
     - Lisnoti now incorporates an OpenType `MATH` table, built using the same pattern as Noto Sans Math but with Lisnoti glyph measurements. This means that **Lisnoti can now be used to typeset equations**.
 - The web font files are now subset by script to optimise web page access. For instance, a Latin-only page downloads about 27&#xA0;KB per weight for Lisnoti&#xA0;2.000, against 350&#xA0;KB for the whole font previously, i.e. a reduction in download size of over 90%. (The previous monolithic approach is still available if required.)
 
-
 ### Added
 
 - Three currency symbols were added, the last of which completes Lisnoti's coverage of the Unicode currency block, U+20A0 to U+20C1:
-    - `৳` (U+09F3) Bangladeshi taka / Bengali rupee sign (from Noto Sans Bengali).
-    - `฿` (U+0E3F) Thai baht sign (from Noto Sans Thai).
-    - `⃁` (U+20C1) Saudi riyal sign (drawn from the Saudi Central Bank's published artwork).
+    - '৳' (U+09F3) Bangladeshi taka / Bengali rupee sign (from Noto Sans Bengali).
+    - '฿' (U+0E3F) Thai baht sign (from Noto Sans Thai).
+    - '⃁' (U+20C1) Saudi riyal sign (drawn from the Saudi Central Bank's published artwork).
 
 ### Removed
 
 - WOFF ('WOFF&#xA0;1') files are no longer included on the basis that every browser now in use supports WOFF2.
+
 
 ## [1.001 to 1.002] - 2023 to 2025
 
@@ -171,20 +185,20 @@ v1.001 was first released in this repository in September 2023 and v1.002 was fi
 These initial releases included the following core features of Lisnoti:
 
 - **Clear visual distinction between easily confused characters.**
-    - A tail was added to lower case `l` to distinguish it from upper case `I`.
-    - A dot was added to the interior of zero `0` to distinguish it from upper case `O`.
-    - Lower case alpha `α` was replaced with Noto Sans JP's, because Noto Sans's is too close to a roman `a` in italic.
-    
-    These changes were propagated e.g. to the `ﬂ` and `ﬄ` ligatures and accented forms. 
+    - A tail was added to lower case 'l' to distinguish it from upper case 'I'.
+    - A dot was added to the interior of zero '0' to distinguish it from upper case 'O'.
+    - Lower case alpha 'α' was replaced with Noto Sans JP's, because Noto Sans's is too close to a roman '*a*' in italic.
 
-- **Real minus sign.** Noto Sans's italics have no minus sign `−` (U+2212) of their own (they use the hyphen!). Lisnoti provides true minus signs for all styles.
+    These changes were propagated e.g. to the 'ﬂ' and 'ﬄ' ligatures and accented forms.
+
+- **Real minus sign.** Noto Sans's italics have no minus sign '−' (U+2212) of their own (they use the hyphen!). Lisnoti provides true minus signs for all styles.
 
 - **Consistent sub and superscripts.** Noto Sans's sub and superscripts are out of alignment with each other,
-  so the roman ones were rebuilt from the full-size letters. Later Lisnoti versions added subscripts `w`, `y` and `z` due in Unicode&#xA0;18.0.
+  so the roman ones were rebuilt from the full-size letters. Later Lisnoti versions added subscripts 'w', 'y' and 'z' due in Unicode&#xA0;18.0.
 
-- **Maths symbol consistency.** The *n*-ary `⋀ ⋁ ⋂ ⋃` were redrawn based on `∏` to be visually distinct from their binary partners. `∩` and `∪` were made shorter for aesthetic reasons (and to match logical operators). Noto Sans Math's arrows were scaled up by 25%, because they were too small next to the other operators. `∝` and `∞` were enlarged and reshaped by hand.
+- **Maths symbol consistency.** The *n*-ary '⋀ ⋁ ⋂ ⋃' were redrawn based on '∏' to be visually distinct from their binary partners. '∩' and '∪' were made shorter for aesthetic reasons (and to match logical operators). Noto Sans Math's arrows were scaled up by 25%, because they were too small next to the other operators. '∝' and '∞' were enlarged and reshaped by hand.
 
-- **Kerning for code.** `r`/`n` were separated so as not to be read as `m`. The aggressive Noto Sans `r`/`.` pair kerning was halved so that a full stop in `other.value` stays visible. Brackets of the same orientation were spaced apart. Combinations of `'` and `"` were separated so that `''` does not read as `"`.
+- **Kerning for code.** 'r'/'n' were separated so as not to be read as 'm'. The aggressive Noto Sans 'r'/'.' pair kerning was halved so that a full stop in `other.value` stays visible. Brackets of the same orientation were spaced apart. Combinations of `'` and `"` were separated so that `''` does not read as `"`.
 
 - **Incorporate additional symbols.** In order to reduce risk of random font substitution, Lisnoti incorporated a selection of shapes, arrows, chess, ticks and box drawings from
   [Noto Sans Symbols](https://fonts.google.com/noto/specimen/Noto+Sans+Symbols),

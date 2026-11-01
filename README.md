@@ -20,7 +20,7 @@ Lisnoti fonts are available in regular, italic, bold and bold-italic variants in
 
 |Font family|Folder|Version|Release date|
 |:---|:---|---:|:---:|
-|Lisnoti | `font-Lisnoti` | 2.004 |2026-09-29|
+|Lisnoti | `font-Lisnoti` | 2.005 |2026-10-31|
 |Lisnoti Code | `font-LisnotiCode` | 0.902 |2026-09-29|
 
 What has changed in each release is in [changelog-Lisnoti.md](changelog-Lisnoti.md) and [changelog-LisnotiCode.md](changelog-LisnotiCode.md).
