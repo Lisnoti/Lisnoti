@@ -6,6 +6,27 @@
 > The glyphs in this changelog are shown in the *local display font*, which
 > means that *they may not look like the actual Lisnoti Code version*.
 
+## [0.903] - 2026-11-02
+
+### Added
+
+- Lisnoti Code NL, the same font with no ligatures, for applications that cannot turn them off. Every character is drawn on its own and has the same width as in Lisnoti Code. The spaces, the hyphen and the box drawing still adapt to their neighbours (`calt`), and the stylistic sets `ss01` and `ss02` remain. It is available as desktop fonts only, in [LisnotiCodeNL-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCodeNL-ttf.zip).
+
+### Changed
+
+- Inherited from the [Lisnoti 2.005 update](changelog-Lisnoti.md#2005---2026-10-31):
+    - Redrawn Greek small letter alpha '*α*' (U+03B1), and the mathematical alphas that use it.
+    - Less space to the right of 'l' (U+006C), with kerning where diagonals or low strokes meet its foot, as in 'lx' or 'lA'.
+    - Redrawn double-struck '𝕝' (U+1D55D) and '𝕀' (U+1D540).
+    - Italic '*ﬀ*', '*ﬃ*' and '*ﬄ*' the same as the separate letters.
+    - Redrawn '⃁' (U+20C1), '⫍' '⫎', '⥹' '⥺' '⥻' '⭄', '⨋', and the radicals '∛' '∜' '؆' '؇'.
+- Brackets have one or two units less room outside them. That room is measured from the letters, and 'l' is now narrower.
+
+### Removed
+
+- Nothing of Lisnoti 2.005's script-style alternates (`ssty`) is carried over. They only serve equations, which need Lisnoti's `MATH` table.
+- Inherited from the [Lisnoti 2.006 update](changelog-Lisnoti.md#2006---2026-11-02): no standard ligatures for 'ff', 'fi', 'fl', 'ffi' and 'ffl'. The standard ligatures (`liga`) are now only Lisnoti Code's own operator ligatures.
+
 ## [0.902] - 2026-09-29
 
 ### Changed

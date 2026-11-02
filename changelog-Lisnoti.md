@@ -8,11 +8,9 @@
 
 ## [Unreleased]
 
-- Consider adding no ligature version of Lisnoti Code (*Lisnoti Code NL*) because not all editors allow users to switch ligatures off. (Don't need woff2 version.)
-
 - [*Long term -- not an immediate priority*] Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not of Noto Sans Math.)
 
-- [*Deferred*] Consider conventional text ligatures (or an equivalent).
+- [*Retained as a future option*] Consider conventional text ligatures (or an equivalent).
     - I'm unconvinced on the justification of standard text ligatures for Lisnoti -- there are no serious collisions and many conventional ligatures look affected to my eye.
     - They could save a little bit of space, but (a) I think the gain marginal and (b) not all sans serif fonts with these ligatures do make the ligatures narrower.
     - Moderate case for: 'ff', 'ft', 'tt', 'tf' because the crosses end up very close to each other.
@@ -23,6 +21,13 @@
     - Consider glyph substitution retaining the same width and with only subtle changes:
         - Substitute the standard 'f' glyph for one with a *curtailed top* when it is followed by a glyph it gets too close to, i.e. 'b', 'h', 'i', 'j', 'k', 'l'. This affects 'fb', 'fh', 'fi', 'fj', 'fk', 'fl'.
         - Substitute the standard glyphs with crosses, i.e. 'f' and 't', for ones with a *curtailed right cross* when followed by a glyph with a cross. This affects 'ff', 'ft', 'tf', 'tt'.
+
+
+## [2.006] - 2026-11-02
+
+### Removed
+
+- The standard ligatures (`liga`) for 'ff', 'fi', 'fl', 'ffi' and 'ffl' have been removed. Version 2.005 automatically included them as the same as the individual glyphs, which means they are pointless. The legacy ligature characters 'ﬀ' 'ﬁ' 'ﬂ' 'ﬃ' 'ﬄ' (U+FB00 to U+FB04) are still in the font.
 
 
 ## [2.005] - 2026-10-31
