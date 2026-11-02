@@ -20,8 +20,8 @@ Lisnoti fonts are available in regular, italic, bold and bold-italic variants in
 
 |Font family|Folder|Version|Release date|
 |:---|:---|---:|:---:|
-|Lisnoti | `font-Lisnoti` | 2.005 |2026-10-31|
-|Lisnoti Code | `font-LisnotiCode` | 0.902 |2026-09-29|
+|Lisnoti | `font-Lisnoti` | 2.006 |2026-11-02|
+|Lisnoti Code | `font-LisnotiCode` | 0.903 |2026-11-02|
 
 What has changed in each release is in [changelog-Lisnoti.md](changelog-Lisnoti.md) and [changelog-LisnotiCode.md](changelog-LisnotiCode.md).
 
@@ -145,7 +145,7 @@ Each font family has its own folder (beginning `font-`), and within that folder,
 <td align="left">One web font file per style and <code>lisnoti-monolithic.css</code></td>
 </tr>
 <tr>
-<td align="left" rowspan="3"><code>font-LisnotiCode/</code></td>
+<td align="left" rowspan="4"><code>font-LisnotiCode/</code></td>
 <td align="left"><code>LisnotiCode-ttf/</code></td>
 <td align="left">Desktop coding font files</td>
 </tr>
@@ -156,6 +156,10 @@ Each font family has its own folder (beginning `font-`), and within that folder,
 <tr>
 <td align="left"><code>LisnotiCode-woff2-monolithic/</code></td>
 <td align="left">One web coding font file per style and <code>lisnoti-code-monolithic.css</code></td>
+</tr>
+<tr>
+<td align="left"><code>LisnotiCodeNL-ttf/</code></td>
+<td align="left">Desktop coding font files without ligatures (Lisnoti Code NL)</td>
 </tr>
 <tr>
 <td align="left"><code>font-LisnotiCodeWS (deprecated)/</code></td>
@@ -268,8 +272,10 @@ Please report bugs using
 - **Ligatures** for `==` `===` `!=` `!==`, `<=` `>=`, `->` `<-` `=>`, and F#/Julia/R pipes `|>` `<|` and their multi-bar forms. A ligature is used only when the whole run of operator characters matches it, so `<==` and `-->` stay as they are.
 - **Box drawing that lines up with the spaces**, so the output of `tree` and similar tools stays aligned.
 
+**Lisnoti Code NL** is the same font with no ligatures, for applications that cannot turn them off. It keeps the spaces, the hyphen and the box drawing, and every character has the same width as in Lisnoti Code.
+
 Getting Lisnoti Code is similar to [getting Lisnoti](#get-lisnoti):
-- To install it, download [LisnotiCode-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-ttf.zip).
+- To install it, download [LisnotiCode-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-ttf.zip). For Lisnoti Code NL, download [LisnotiCodeNL-ttf.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCodeNL-ttf.zip). The two can be installed side by side.
 - For a website, download [LisnotiCode-woff2.zip](https://github.com/Lisnoti/Lisnoti/raw/refs/heads/main/font-LisnotiCode/LisnotiCode-woff2.zip) and link its stylesheet:
 
     ```html
@@ -288,7 +294,7 @@ Whether *contextual alternates* and *standard ligatures* are on or off  depends 
 
 - **VS Code** turns both off unless told otherwise. In `settings.json` set `"editor.fontFamily": "Lisnoti Code"` and `"editor.fontLigatures": true`, or give a feature list instead of `true`, e.g. `"'liga' off, 'calt' on, 'ss05' on"` for the spacing and the arrows only.
 - **Word** also turns both off by default. In the Font dialog (Ctrl+D), *Advanced* tab: *Ligatures: Standard Only* turns on `liga`, the *Use Contextual Alternates* box turns on `calt`, and *Stylistic sets* picks one set.
-- **Visual Studio** turns both on and has no setting to turn them off.
+- **Visual Studio** turns both on and has no setting to turn them off. Use Lisnoti Code NL there if you do not want the ligatures.
 
 The *contextual alternates* (`calt`) features are
 - vary space length &ndash; wide when next to whitespace and normal otherwise,
