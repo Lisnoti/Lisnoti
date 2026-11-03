@@ -8,6 +8,8 @@
 
 ## [Unreleased]
 
+- [*Next release*] Drop the `MATH` table from Italic and Bold Italic. Nothing known uses it there: Word judges a maths font by its Regular style, and `\boldmath` in LaTeX uses the Bold style. This will make each of those two files about 7.5% smaller.
+
 - [*Long term -- not an immediate priority*] Consider creating a variable weight version of Lisnoti. (There is a variable weight version of Noto Sans, but not of Noto Sans Math.)
 
 - [*Retained as a future option*] Consider conventional text ligatures (or an equivalent).
